@@ -1,0 +1,190 @@
+﻿using Microsoft.Win32;
+using MiHoYoStarter.Utils;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Diagnostics;
+using System.Drawing;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using System.Web.Script.Serialization;
+using System.Windows.Forms;
+
+namespace MiHoYoStarter
+{
+    public partial class FormMain : Form
+    {
+
+        private GameFormControl genshinFormControl = new GameFormControl("原神", "原神", "Genshin", "YuanShen");
+        private GameFormControl genshinCloudFormControl = new GameFormControl("云·原神", "云原神", "GenshinCloud", "Genshin Impact Cloud Game");
+        private GameFormControl starRailFormControl = new GameFormControl("崩坏：星穹铁道", "崩铁", "StarRail", "StarRail");
+
+        public FormMain()
+        {
+            InitializeComponent();
+        }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+            // 标题加上版本号
+            var version = HuiUtils.GetMyVersion();
+            this.Text += version;
+            // GAHelper.Instance.RequestPageView($"/acct2/main/{version}", $"进入{version}版本MHY账户切换工具主界面");
+
+            // 初始化界面控制
+            genshinFormControl.InitControl(this, tabPageGenshin, Properties.Settings.Default.GenshinPath);
+            genshinCloudFormControl.InitControl(this, tabPageGenshinCloud, Properties.Settings.Default.GenshinCloudPath);
+            starRailFormControl.InitControl(this, tabPageSatrRail, Properties.Settings.Default.StarRailPath);
+        }
+
+        public void RefreshNotifyIconContextMenu()
+        {
+            this.contextMenuStrip1.Items.Clear();
+            if (DisplayGenshinTabToolStripMenuItem.Checked)
+            {
+                this.contextMenuStrip1.Items.AddRange(genshinFormControl.AcctMenuItemList.ToArray());
+                this.contextMenuStrip1.Items.Add(new ToolStripSeparator());
+            }
+
+            if (DisplayGenshinCloudTabToolStripMenuItem.Checked)
+            {
+                this.contextMenuStrip1.Items.AddRange(genshinCloudFormControl.AcctMenuItemList.ToArray());
+                this.contextMenuStrip1.Items.Add(new ToolStripSeparator());
+            }
+            if (DisplayStarRailTabToolStripMenuItem.Checked)
+            {
+                this.contextMenuStrip1.Items.AddRange(starRailFormControl.AcctMenuItemList.ToArray());
+                this.contextMenuStrip1.Items.Add(new ToolStripSeparator()); ;
+            }
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+                this.显示主界面ToolStripMenuItem,
+                this.退出ToolStripMenuItem});
+        }
+
+        private void FormMain_SizeChanged(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Minimized && notifyIcon.Visible)
+            {
+                this.ShowInTaskbar = false;
+            }
+        }
+
+        private void notifyIcon_DoubleClick(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Minimized)
+            {
+                WindowState = FormWindowState.Normal;
+                this.ShowInTaskbar = true;
+            }
+            this.Activate();
+        }
+
+        private void btnStarRailFPSEdit_Click(object sender, EventArgs e)
+        {
+            var value = Registry.GetValue(@"HKEY_CURRENT_USER\Software\miHoYo\崩坏：星穹铁道", "GraphicsSettings_Model_h2986158309", null);
+            if (value != null)
+            {
+                var json = Encoding.UTF8.GetString((byte[])value);
+                // 一般长这样：{"FPS":60,"EnableVSync":true,"RenderScale":1.4,"ResolutionQuality":5,"ShadowQuality":5,"LightQuality":5,"CharacterQuality":5,"EnvDetailQuality":5,"ReflectionQuality":5,"BloomQuality":5,"AAMode":1}
+                // JavaScriptSerializer 没法反序列化成通用对象，我也很绝望呀
+                Regex r = new Regex("\"FPS\":\\d*,");
+                if (r.IsMatch(json))
+                {
+                    string newJson = r.Replace(json, $"\"FPS\":{numericUpDownFPS.Value},");
+                    Registry.SetValue(@"HKEY_CURRENT_USER\Software\miHoYo\崩坏：星穹铁道", "GraphicsSettings_Model_h2986158309", Encoding.UTF8.GetBytes(newJson));
+                    MessageBox.Show("应用成功！", "提示");
+                }
+                else
+                {
+                    MessageBox.Show("没有找到FPS相关配置，大概率是程序有问题啦，联系作者解决~", "提示");
+                }
+
+            }
+        }
+
+        private void DisplayGenshinTabToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DisplayGenshinTabToolStripMenuItem.Checked = !DisplayGenshinTabToolStripMenuItem.Checked;
+            if (DisplayGenshinTabToolStripMenuItem.Checked)
+            {
+                if (!tab1.TabPages.Contains(tabPageGenshin))
+                {
+                    tab1.TabPages.Add(tabPageGenshin);
+                }
+            }
+            else
+            {
+                if (tab1.TabPages.Contains(tabPageGenshin))
+                {
+                    tab1.TabPages.Remove(tabPageGenshin);
+                }
+            }
+            RefreshNotifyIconContextMenu();
+        }
+
+        private void DisplayGenshinCloudTabToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DisplayGenshinCloudTabToolStripMenuItem.Checked = !DisplayGenshinCloudTabToolStripMenuItem.Checked;
+            if (DisplayGenshinCloudTabToolStripMenuItem.Checked)
+            {
+                if (!tab1.TabPages.Contains(tabPageGenshinCloud))
+                {
+                    tab1.TabPages.Add(tabPageGenshinCloud);
+                }
+            }
+            else
+            {
+                if (tab1.TabPages.Contains(tabPageGenshinCloud))
+                {
+                    tab1.TabPages.Remove(tabPageGenshinCloud);
+                }
+            }
+            RefreshNotifyIconContextMenu();
+        }
+
+        private void DisplayStarRailTabToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DisplayStarRailTabToolStripMenuItem.Checked = !DisplayStarRailTabToolStripMenuItem.Checked;
+            if (DisplayStarRailTabToolStripMenuItem.Checked)
+            {
+                if (!tab1.TabPages.Contains(tabPageSatrRail))
+                {
+                    tab1.TabPages.Add(tabPageSatrRail);
+                }
+            }
+            else
+            {
+                if (tab1.TabPages.Contains(tabPageSatrRail))
+                {
+                    tab1.TabPages.Remove(tabPageSatrRail);
+                }
+            }
+            RefreshNotifyIconContextMenu();
+        }
+
+        private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            this.Close();
+        }
+
+        private void 显示主界面ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            notifyIcon_DoubleClick(sender, e);
+        }
+
+        private void 主页ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://github.com/babalae/genshin-account");
+        }
+
+        private void 请作者喝咖啡ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://github.com/huiyadanli/huiyadanli/blob/master/DONATE.md");
+        }
+    }
+}
