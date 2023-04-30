@@ -87,6 +87,10 @@ namespace MiHoYoStarter
                     txtPath.Text = path;
                 }
             }
+            else
+            {
+                txtPath.Text = pathSetting;
+            }
 
             // 绑定事件
             btnChoosePath.Click += btnChoosePathClick;

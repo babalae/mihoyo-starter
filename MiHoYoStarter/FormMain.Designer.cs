@@ -699,14 +699,14 @@
             // 主页ToolStripMenuItem
             // 
             this.主页ToolStripMenuItem.Name = "主页ToolStripMenuItem";
-            this.主页ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.主页ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.主页ToolStripMenuItem.Text = "主页";
             this.主页ToolStripMenuItem.Click += new System.EventHandler(this.主页ToolStripMenuItem_Click);
             // 
             // 请作者喝咖啡ToolStripMenuItem
             // 
             this.请作者喝咖啡ToolStripMenuItem.Name = "请作者喝咖啡ToolStripMenuItem";
-            this.请作者喝咖啡ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.请作者喝咖啡ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.请作者喝咖啡ToolStripMenuItem.Text = "请作者喝咖啡";
             this.请作者喝咖啡ToolStripMenuItem.Click += new System.EventHandler(this.请作者喝咖啡ToolStripMenuItem_Click);
             // 
@@ -751,6 +751,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormMain";
             this.Text = "MHY启动器";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormMain_FormClosed);
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.SizeChanged += new System.EventHandler(this.FormMain_SizeChanged);
             this.tab1.ResumeLayout(false);

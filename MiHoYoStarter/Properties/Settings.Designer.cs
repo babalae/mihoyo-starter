@@ -23,30 +23,75 @@ namespace MiHoYoStarter.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string GenshinPath {
             get {
                 return ((string)(this["GenshinPath"]));
             }
+            set {
+                this["GenshinPath"] = value;
+            }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string GenshinCloudPath {
             get {
                 return ((string)(this["GenshinCloudPath"]));
             }
+            set {
+                this["GenshinCloudPath"] = value;
+            }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string StarRailPath {
             get {
                 return ((string)(this["StarRailPath"]));
+            }
+            set {
+                this["StarRailPath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool DisplayGenshinEnabled {
+            get {
+                return ((bool)(this["DisplayGenshinEnabled"]));
+            }
+            set {
+                this["DisplayGenshinEnabled"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool DisplayGenshinCloudEnabled {
+            get {
+                return ((bool)(this["DisplayGenshinCloudEnabled"]));
+            }
+            set {
+                this["DisplayGenshinCloudEnabled"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool DisplayStarRailEnabled {
+            get {
+                return ((bool)(this["DisplayStarRailEnabled"]));
+            }
+            set {
+                this["DisplayStarRailEnabled"] = value;
             }
         }
     }

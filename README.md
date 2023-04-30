@@ -1,22 +1,24 @@
-# 🛠原神账号切换工具
+# 🛠 MHY启动器
 
-一个用于在一台电脑上快速切换原神账号的小工具。（暂时只支持国服）
+原神、云·原神、崩坏：星穹铁道 多账号快速切换工具，只支持国服（因为我不用外服哒）。
 
-<del>原神周年可以领20连，为了方便切换各个小号领取，所以有了这个工具</del>
+如果你不玩其中某个游戏，可以通过“界面显示”菜单进行隐藏。
 
-[📥Github下载（1.5）](https://github.com/babalae/genshin-account/releases/download/v1.5/GenshinAccount_v1.5.zip)
+[老版本](https://github.com/babalae/genshin-account)只支持原神，现在看看MHY现在游戏基本都是一样的账号信息存储方式，顺手就重写了下（复制粘贴了下）。
+
+[📥Github下载（1.6）](https://github.com/babalae/mihoyo-starter/releases/download/1.6/MiHoYoStarter_1.6.zip)
 
 ## 截图
-![Screenshot](https://raw.githubusercontent.com/babalae/genshin-account/main/Document/Screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/babalae/mihoyo-starter/main/Document/Screenshot.gif)
 
 ## 使用方法
 
 环境要求：
 
 * Windows 7 或更高版本。
-* [.NET Framework 4.5](https://www.microsoft.com/zh-cn/download/details.aspx?id=30653) 或更高版本。
+* [.NET Framework 4.5.2](https://www.microsoft.com/en-us/download/details.aspx?id=42642) 或更高版本。
 
-就三个按钮，先登录后保存，后续就可以随便切换了。注意切换账户要关闭原神进程。
+就三个按钮，先登录后保存，后续就可以随便切换了。
 
 具体点：
 
@@ -26,4 +28,10 @@
 
 然后在游戏退出后就可以随意选中已保存的账号，点击[切换选中账号]，再运行游戏默认登录的就是选中的账号。
 
-注意要使用 切换时自动重启原神 的功能时，必须选择原神安装路径才能使用。正常情况下程序会自动从注册表中读取到安装信息，无需手动填写。
+注意：
+
+1. 切换时会自动重启游戏（所以要求填写游戏目录），可以在托盘图标处点击账号进行切换。
+2. 正常情况下，游戏目录会自动从注册表游戏安装信息中读取，个别情况下会读取不到或者安装信息错的（你移动过游戏目录），此时需要手动选择游戏本体目录，注意不是游戏启动程序目录！以下是游戏本体路径：
+    * 原神(国服)：`\Genshin Impact\Genshin Impact Game\YuanShen.exe`
+    * 云·原神：`\Genshin Impact Cloud Game\Genshin Impact Cloud Game.exe`
+    * 崩坏：星穹铁道：`\Star Rail\Game\StarRail.exe`

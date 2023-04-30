@@ -41,7 +41,7 @@ namespace MiHoYoStarter.Utils
         // 根据实际情况修改
         private static readonly HttpClient client = new HttpClient();
 
-        private const string GAUrl = "https://www.google-analytics.com/mp/collect?api_secret=urKlcc29TSy3OIkHr8yFSQ&measurement_id=G-BE6FRPZS1W";
+        private const string GAUrl = "https://www.google-analytics.com/mp/collect?api_secret=MAEPXJmgSx2kwYIpcg9vNg&measurement_id=G-R7W7VW4SF1";
 
         private static readonly string cid = Device.Value(); // Anonymous Client ID. // Guid.NewGuid().ToString()
 
@@ -88,7 +88,7 @@ namespace MiHoYoStarter.Utils
                 var json = serializer.Serialize(values);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
                 var response = await client.PostAsync(GAUrl, content);
-                // Console.WriteLine(response.ToString());
+                Console.WriteLine(response.ToString());
             }
             catch (Exception ex)
             {

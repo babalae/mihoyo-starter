@@ -2,14 +2,23 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MiHoYoStarter.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="GenshinPath" Type="System.String" Scope="Application">
+    <Setting Name="GenshinPath" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="GenshinCloudPath" Type="System.String" Scope="Application">
+    <Setting Name="GenshinCloudPath" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="StarRailPath" Type="System.String" Scope="Application">
+    <Setting Name="StarRailPath" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DisplayGenshinEnabled" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="DisplayGenshinCloudEnabled" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="DisplayStarRailEnabled" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
     </Setting>
   </Settings>
 </SettingsFile>
