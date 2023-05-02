@@ -35,3 +35,7 @@
     * 原神(国服)：`\Genshin Impact\Genshin Impact Game\YuanShen.exe`
     * 云·原神：`\Genshin Impact Cloud Game\Genshin Impact Cloud Game.exe`
     * 崩坏：星穹铁道：`\Star Rail\Game\StarRail.exe`
+
+觉的好用的话，可以支持作者哟ヾ(･ω･`｡) 👇
+* [⚡爱发电](https://afdian.net/@huiyadanli)
+* [🍚微信赞赏](https://github.com/huiyadanli/huiyadanli/blob/master/DONATE.md)
