@@ -115,15 +115,36 @@ namespace MiHoYoStarter
 
         private void btnChoosePathClick(object sender, EventArgs e)
         {
-            FolderBrowserDialog dialog = new FolderBrowserDialog();
-            dialog.Description = $@"请选择【{GameNameCN}】的游戏本体启动路径（注意不是启动器路径！！！）
-以下是游戏本体目录：
+            var dialog = new OpenFileDialog();
+            dialog.Multiselect = false;//是否可以选择多个文件
+            dialog.Title = "请选择游戏启动程序（注意不是游戏启动器 launcher.exe！）";
+            //选择某种类型的文件
+            switch (GameNameEN)
+            {
+                case "Genshin":
+                    dialog.Filter = "原神国服|YuanShen.exe|可执行文件(*.exe)|*.exe";
+                    break;
+                case "GenshinCloud":
+                    dialog.Filter = "云原神|Genshin Impact Cloud Game.exe|可执行文件(*.exe)|*.exe";
+                    break;
+                case "StarRail":
+                    dialog.Filter = "崩坏：星穹铁道|StarRail.exe|可执行文件(*.exe)|*.exe";
+                    break;
+            }
+            
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                if (dialog.FileName.EndsWith("launcher.exe"))
+                {
+                    string msg = $@"请选择【{GameNameCN}】的游戏本体执行文件（注意不是启动器！！！）
+以下是游戏本体执行文件的路径：
 原神(国服)：\Genshin Impact\Genshin Impact Game\YuanShen.exe
 云·原神：\Genshin Impact Cloud Game\Genshin Impact Cloud Game.exe
 崩坏：星穹铁道：\Star Rail\Game\StarRail.exe";
-            if (dialog.ShowDialog() == DialogResult.OK)
-            {
-                txtPath.Text = dialog.SelectedPath;
+                    MessageBox.Show(msg, "提示");
+                    return;
+                }
+                txtPath.Text = dialog.FileName;
             }
         }
 
