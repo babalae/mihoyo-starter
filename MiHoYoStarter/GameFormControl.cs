@@ -159,7 +159,13 @@ namespace MiHoYoStarter
         {
             if (string.IsNullOrEmpty(txtPath.Text))
             {
-                MessageBox.Show($"请先选择【{GameNameCN}】安装路径，才能进行账户切换", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"请先选择【{GameNameCN}】游戏启动程序路径，才能进行账户切换", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (!txtPath.Text.ToLower().EndsWith("exe"))
+            {
+                MessageBox.Show($"请先选择正确游戏启动程序路径（注意不是目录，是exe可执行文件）", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
             }
             if (lvwAcct.SelectedItems.Count == 0)
             {
