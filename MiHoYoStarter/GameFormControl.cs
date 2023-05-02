@@ -68,23 +68,26 @@ namespace MiHoYoStarter
             if (string.IsNullOrEmpty(pathSetting))
             {
                 string installPath = FindInstallPathFromRegistry(GameNameCN);
-                string path = null;
-                if (GameNameEN == "Genshin")
+                if (installPath != null)
                 {
-                    path = Path.Combine(installPath, "Genshin Impact Game", "YuanShen.exe"); // 只支持国服
-                }
-                else if (GameNameEN == "GenshinCloud")
-                {
-                    path = Path.Combine(installPath, "Genshin Impact Cloud Game.exe");
-                }
-                else if (GameNameEN == "StarRail")
-                {
-                    path = Path.Combine(installPath, "Game", "StarRail.exe");
-                }
+                    string path = null;
+                    switch (GameNameEN)
+                    {
+                        case "Genshin":
+                            path = Path.Combine(installPath, "Genshin Impact Game", "YuanShen.exe"); // 只支持国服
+                            break;
+                        case "GenshinCloud":
+                            path = Path.Combine(installPath, "Genshin Impact Cloud Game.exe");
+                            break;
+                        case "StarRail":
+                            path = Path.Combine(installPath, "Game", "StarRail.exe");
+                            break;
+                    }
 
-                if (path != null && File.Exists(path))
-                {
-                    txtPath.Text = path;
+                    if (path != null && File.Exists(path))
+                    {
+                        txtPath.Text = path;
+                    }
                 }
             }
             else
