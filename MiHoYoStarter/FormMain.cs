@@ -44,6 +44,10 @@ namespace MiHoYoStarter
             DisplayGenshinTabToolStripMenuItem.Checked = Properties.Settings.Default.DisplayGenshinEnabled;
             DisplayGenshinCloudTabToolStripMenuItem.Checked = Properties.Settings.Default.DisplayGenshinCloudEnabled;
             DisplayStarRailTabToolStripMenuItem.Checked = Properties.Settings.Default.DisplayStarRailEnabled;
+
+            txtGenshinStartParam.Text = Properties.Settings.Default.GenshinStartParam;
+            txtStarRailStartParam.Text = Properties.Settings.Default.StarRailStartParam;
+
             RefreshTab();
         }
 
@@ -76,6 +80,7 @@ namespace MiHoYoStarter
             if (WindowState == FormWindowState.Minimized && notifyIcon.Visible)
             {
                 this.ShowInTaskbar = false;
+                this.Visible = false;
             }
         }
 
@@ -85,6 +90,7 @@ namespace MiHoYoStarter
             {
                 WindowState = FormWindowState.Normal;
                 this.ShowInTaskbar = true;
+                this.Visible = true;
             }
             this.Activate();
         }
@@ -218,9 +224,14 @@ namespace MiHoYoStarter
             Properties.Settings.Default.DisplayGenshinEnabled = DisplayGenshinTabToolStripMenuItem.Checked;
             Properties.Settings.Default.DisplayGenshinCloudEnabled = DisplayGenshinCloudTabToolStripMenuItem.Checked;
             Properties.Settings.Default.DisplayStarRailEnabled = DisplayStarRailTabToolStripMenuItem.Checked;
+            
             Properties.Settings.Default.GenshinPath = txtGenshinPath.Text;
             Properties.Settings.Default.GenshinCloudPath = txtGenshinCloudPath.Text;
             Properties.Settings.Default.StarRailPath = txtStarRailPath.Text;
+
+            Properties.Settings.Default.GenshinStartParam = txtGenshinStartParam.Text;
+            Properties.Settings.Default.StarRailStartParam = txtStarRailStartParam.Text;
+
             Properties.Settings.Default.Save();
         }
     }

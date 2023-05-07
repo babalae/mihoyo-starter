@@ -94,5 +94,29 @@ namespace MiHoYoStarter.Properties {
                 this["DisplayStarRailEnabled"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string GenshinStartParam {
+            get {
+                return ((string)(this["GenshinStartParam"]));
+            }
+            set {
+                this["GenshinStartParam"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string StarRailStartParam {
+            get {
+                return ((string)(this["StarRailStartParam"]));
+            }
+            set {
+                this["StarRailStartParam"] = value;
+            }
+        }
     }
 }

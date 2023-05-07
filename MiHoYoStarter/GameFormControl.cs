@@ -100,6 +100,7 @@ namespace MiHoYoStarter
             btnAdd.Click += btnAddClick;
             btnSwitch.Click += btnSwitchClick;
             btnDelete.Click += btnDeleteClick;
+            lvwAcct.MouseDoubleClick += lvwAcct_MouseDoubleClick;
 
             RefreshList();
         }
@@ -191,6 +192,15 @@ namespace MiHoYoStarter
             }
             MiHoYoAccount.DeleteFromDisk(userDataPath, name);
             RefreshList();
+        }
+
+        private void lvwAcct_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            ListViewHitTestInfo info = lvwAcct.HitTest(e.X, e.Y);
+            if (info.Item != null)
+            {
+                Switch(info.Item.Text);
+            }
         }
 
         private void RefreshList()

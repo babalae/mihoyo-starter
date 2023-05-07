@@ -109,11 +109,11 @@
             this.tab1.Controls.Add(this.tabPageGenshinCloud);
             this.tab1.Controls.Add(this.tabPageSatrRail);
             this.tab1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tab1.Location = new System.Drawing.Point(0, 34);
-            this.tab1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tab1.Location = new System.Drawing.Point(0, 25);
+            this.tab1.Margin = new System.Windows.Forms.Padding(4);
             this.tab1.Name = "tab1";
             this.tab1.SelectedIndex = 0;
-            this.tab1.Size = new System.Drawing.Size(574, 692);
+            this.tab1.Size = new System.Drawing.Size(574, 701);
             this.tab1.TabIndex = 0;
             // 
             // tabPageGenshin
@@ -121,10 +121,10 @@
             this.tabPageGenshin.BackColor = System.Drawing.Color.White;
             this.tabPageGenshin.Controls.Add(this.groupBox1);
             this.tabPageGenshin.Location = new System.Drawing.Point(4, 28);
-            this.tabPageGenshin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPageGenshin.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageGenshin.Name = "tabPageGenshin";
-            this.tabPageGenshin.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPageGenshin.Size = new System.Drawing.Size(566, 660);
+            this.tabPageGenshin.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPageGenshin.Size = new System.Drawing.Size(566, 669);
             this.tabPageGenshin.TabIndex = 0;
             this.tabPageGenshin.Text = "原神";
             // 
@@ -145,10 +145,10 @@
             this.groupBox1.Controls.Add(this.btnGenshinAdd);
             this.groupBox1.Controls.Add(this.lvwGenshinAcct);
             this.groupBox1.Location = new System.Drawing.Point(12, 9);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(536, 632);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(536, 641);
             this.groupBox1.TabIndex = 39;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "账号切换";
@@ -158,7 +158,7 @@
             this.picHelpSatrtParam.Image = global::MiHoYoStarter.Properties.Resources.attention;
             this.picHelpSatrtParam.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.picHelpSatrtParam.Location = new System.Drawing.Point(114, 100);
-            this.picHelpSatrtParam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picHelpSatrtParam.Margin = new System.Windows.Forms.Padding(4);
             this.picHelpSatrtParam.Name = "picHelpSatrtParam";
             this.picHelpSatrtParam.Size = new System.Drawing.Size(24, 24);
             this.picHelpSatrtParam.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -183,7 +183,7 @@
             this.txtGenshinStartParam.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtGenshinStartParam.Location = new System.Drawing.Point(21, 126);
-            this.txtGenshinStartParam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtGenshinStartParam.Margin = new System.Windows.Forms.Padding(4);
             this.txtGenshinStartParam.Name = "txtGenshinStartParam";
             this.txtGenshinStartParam.Size = new System.Drawing.Size(504, 28);
             this.txtGenshinStartParam.TabIndex = 36;
@@ -193,7 +193,7 @@
             this.txtGenshinPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtGenshinPath.Location = new System.Drawing.Point(21, 63);
-            this.txtGenshinPath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtGenshinPath.Margin = new System.Windows.Forms.Padding(4);
             this.txtGenshinPath.Name = "txtGenshinPath";
             this.txtGenshinPath.Size = new System.Drawing.Size(444, 28);
             this.txtGenshinPath.TabIndex = 33;
@@ -214,7 +214,7 @@
             this.btnGenshinChoosePath.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGenshinChoosePath.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnGenshinChoosePath.Location = new System.Drawing.Point(476, 60);
-            this.btnGenshinChoosePath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGenshinChoosePath.Margin = new System.Windows.Forms.Padding(4);
             this.btnGenshinChoosePath.Name = "btnGenshinChoosePath";
             this.btnGenshinChoosePath.Size = new System.Drawing.Size(51, 34);
             this.btnGenshinChoosePath.TabIndex = 34;
@@ -226,7 +226,7 @@
             this.btnGenshinDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGenshinDelete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnGenshinDelete.Location = new System.Drawing.Point(392, 290);
-            this.btnGenshinDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGenshinDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnGenshinDelete.Name = "btnGenshinDelete";
             this.btnGenshinDelete.Size = new System.Drawing.Size(135, 36);
             this.btnGenshinDelete.TabIndex = 28;
@@ -248,7 +248,7 @@
             this.btnGenshinSwitch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGenshinSwitch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnGenshinSwitch.Location = new System.Drawing.Point(392, 244);
-            this.btnGenshinSwitch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGenshinSwitch.Margin = new System.Windows.Forms.Padding(4);
             this.btnGenshinSwitch.Name = "btnGenshinSwitch";
             this.btnGenshinSwitch.Size = new System.Drawing.Size(135, 36);
             this.btnGenshinSwitch.TabIndex = 26;
@@ -260,7 +260,7 @@
             this.btnGenshinAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGenshinAdd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnGenshinAdd.Location = new System.Drawing.Point(392, 202);
-            this.btnGenshinAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGenshinAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnGenshinAdd.Name = "btnGenshinAdd";
             this.btnGenshinAdd.Size = new System.Drawing.Size(135, 33);
             this.btnGenshinAdd.TabIndex = 25;
@@ -279,7 +279,7 @@
             this.lvwGenshinAcct.Location = new System.Drawing.Point(21, 202);
             this.lvwGenshinAcct.MultiSelect = false;
             this.lvwGenshinAcct.Name = "lvwGenshinAcct";
-            this.lvwGenshinAcct.Size = new System.Drawing.Size(361, 408);
+            this.lvwGenshinAcct.Size = new System.Drawing.Size(361, 417);
             this.lvwGenshinAcct.TabIndex = 24;
             this.lvwGenshinAcct.UseCompatibleStateImageBehavior = false;
             this.lvwGenshinAcct.View = System.Windows.Forms.View.List;
@@ -294,9 +294,9 @@
             this.tabPageGenshinCloud.BackColor = System.Drawing.Color.White;
             this.tabPageGenshinCloud.Controls.Add(this.groupBox6);
             this.tabPageGenshinCloud.Location = new System.Drawing.Point(4, 28);
-            this.tabPageGenshinCloud.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPageGenshinCloud.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageGenshinCloud.Name = "tabPageGenshinCloud";
-            this.tabPageGenshinCloud.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPageGenshinCloud.Padding = new System.Windows.Forms.Padding(4);
             this.tabPageGenshinCloud.Size = new System.Drawing.Size(566, 660);
             this.tabPageGenshinCloud.TabIndex = 1;
             this.tabPageGenshinCloud.Text = "云·原神";
@@ -315,9 +315,9 @@
             this.groupBox6.Controls.Add(this.btnGenshinCloudAdd);
             this.groupBox6.Controls.Add(this.lvwGenshinCloudAcct);
             this.groupBox6.Location = new System.Drawing.Point(12, 9);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox6.Size = new System.Drawing.Size(536, 632);
             this.groupBox6.TabIndex = 43;
             this.groupBox6.TabStop = false;
@@ -328,7 +328,7 @@
             this.txtGenshinCloudPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtGenshinCloudPath.Location = new System.Drawing.Point(21, 63);
-            this.txtGenshinCloudPath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtGenshinCloudPath.Margin = new System.Windows.Forms.Padding(4);
             this.txtGenshinCloudPath.Name = "txtGenshinCloudPath";
             this.txtGenshinCloudPath.Size = new System.Drawing.Size(444, 28);
             this.txtGenshinCloudPath.TabIndex = 33;
@@ -349,7 +349,7 @@
             this.btnGenshinCloudChoosePath.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGenshinCloudChoosePath.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnGenshinCloudChoosePath.Location = new System.Drawing.Point(476, 60);
-            this.btnGenshinCloudChoosePath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGenshinCloudChoosePath.Margin = new System.Windows.Forms.Padding(4);
             this.btnGenshinCloudChoosePath.Name = "btnGenshinCloudChoosePath";
             this.btnGenshinCloudChoosePath.Size = new System.Drawing.Size(51, 34);
             this.btnGenshinCloudChoosePath.TabIndex = 34;
@@ -361,7 +361,7 @@
             this.btnGenshinCloudDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGenshinCloudDelete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnGenshinCloudDelete.Location = new System.Drawing.Point(392, 290);
-            this.btnGenshinCloudDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGenshinCloudDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnGenshinCloudDelete.Name = "btnGenshinCloudDelete";
             this.btnGenshinCloudDelete.Size = new System.Drawing.Size(135, 36);
             this.btnGenshinCloudDelete.TabIndex = 28;
@@ -383,7 +383,7 @@
             this.btnGenshinCloudSwitch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGenshinCloudSwitch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnGenshinCloudSwitch.Location = new System.Drawing.Point(392, 244);
-            this.btnGenshinCloudSwitch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGenshinCloudSwitch.Margin = new System.Windows.Forms.Padding(4);
             this.btnGenshinCloudSwitch.Name = "btnGenshinCloudSwitch";
             this.btnGenshinCloudSwitch.Size = new System.Drawing.Size(135, 36);
             this.btnGenshinCloudSwitch.TabIndex = 26;
@@ -395,7 +395,7 @@
             this.btnGenshinCloudAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGenshinCloudAdd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnGenshinCloudAdd.Location = new System.Drawing.Point(392, 202);
-            this.btnGenshinCloudAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGenshinCloudAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnGenshinCloudAdd.Name = "btnGenshinCloudAdd";
             this.btnGenshinCloudAdd.Size = new System.Drawing.Size(135, 33);
             this.btnGenshinCloudAdd.TabIndex = 25;
@@ -430,9 +430,9 @@
             this.tabPageSatrRail.Controls.Add(this.groupBox3);
             this.tabPageSatrRail.Controls.Add(this.groupBox4);
             this.tabPageSatrRail.Location = new System.Drawing.Point(4, 28);
-            this.tabPageSatrRail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPageSatrRail.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageSatrRail.Name = "tabPageSatrRail";
-            this.tabPageSatrRail.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPageSatrRail.Padding = new System.Windows.Forms.Padding(4);
             this.tabPageSatrRail.Size = new System.Drawing.Size(566, 660);
             this.tabPageSatrRail.TabIndex = 2;
             this.tabPageSatrRail.Text = "崩坏：星穹铁道";
@@ -446,9 +446,9 @@
             this.groupBox3.Controls.Add(this.numericUpDownFPS);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Location = new System.Drawing.Point(12, 505);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(534, 126);
             this.groupBox3.TabIndex = 42;
             this.groupBox3.TabStop = false;
@@ -459,7 +459,7 @@
             this.pictureBox2.Image = global::MiHoYoStarter.Properties.Resources.attention;
             this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pictureBox2.Location = new System.Drawing.Point(291, 46);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(24, 24);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -471,7 +471,7 @@
             // btnStarRailFPSEdit
             // 
             this.btnStarRailFPSEdit.Location = new System.Drawing.Point(392, 39);
-            this.btnStarRailFPSEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStarRailFPSEdit.Margin = new System.Windows.Forms.Padding(4);
             this.btnStarRailFPSEdit.Name = "btnStarRailFPSEdit";
             this.btnStarRailFPSEdit.Size = new System.Drawing.Size(112, 34);
             this.btnStarRailFPSEdit.TabIndex = 3;
@@ -482,7 +482,7 @@
             // numericUpDownFPS
             // 
             this.numericUpDownFPS.Location = new System.Drawing.Point(192, 44);
-            this.numericUpDownFPS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDownFPS.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDownFPS.Maximum = new decimal(new int[] {
             200,
             0,
@@ -529,9 +529,9 @@
             this.groupBox4.Controls.Add(this.btnStarRailAdd);
             this.groupBox4.Controls.Add(this.lvwStarRailAcct);
             this.groupBox4.Location = new System.Drawing.Point(12, 9);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox4.Size = new System.Drawing.Size(536, 487);
             this.groupBox4.TabIndex = 41;
             this.groupBox4.TabStop = false;
@@ -542,7 +542,7 @@
             this.pictureBox1.Image = global::MiHoYoStarter.Properties.Resources.attention;
             this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pictureBox1.Location = new System.Drawing.Point(114, 100);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(24, 24);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -567,7 +567,7 @@
             this.txtStarRailStartParam.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtStarRailStartParam.Location = new System.Drawing.Point(21, 126);
-            this.txtStarRailStartParam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtStarRailStartParam.Margin = new System.Windows.Forms.Padding(4);
             this.txtStarRailStartParam.Name = "txtStarRailStartParam";
             this.txtStarRailStartParam.Size = new System.Drawing.Size(504, 28);
             this.txtStarRailStartParam.TabIndex = 36;
@@ -577,7 +577,7 @@
             this.txtStarRailPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtStarRailPath.Location = new System.Drawing.Point(21, 63);
-            this.txtStarRailPath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtStarRailPath.Margin = new System.Windows.Forms.Padding(4);
             this.txtStarRailPath.Name = "txtStarRailPath";
             this.txtStarRailPath.Size = new System.Drawing.Size(444, 28);
             this.txtStarRailPath.TabIndex = 33;
@@ -598,7 +598,7 @@
             this.btnStarRailChoosePath.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnStarRailChoosePath.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnStarRailChoosePath.Location = new System.Drawing.Point(476, 60);
-            this.btnStarRailChoosePath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStarRailChoosePath.Margin = new System.Windows.Forms.Padding(4);
             this.btnStarRailChoosePath.Name = "btnStarRailChoosePath";
             this.btnStarRailChoosePath.Size = new System.Drawing.Size(51, 34);
             this.btnStarRailChoosePath.TabIndex = 34;
@@ -610,7 +610,7 @@
             this.btnStarRailDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnStarRailDelete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnStarRailDelete.Location = new System.Drawing.Point(392, 290);
-            this.btnStarRailDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStarRailDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnStarRailDelete.Name = "btnStarRailDelete";
             this.btnStarRailDelete.Size = new System.Drawing.Size(135, 36);
             this.btnStarRailDelete.TabIndex = 28;
@@ -632,7 +632,7 @@
             this.btnStarRailSwitch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnStarRailSwitch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnStarRailSwitch.Location = new System.Drawing.Point(392, 244);
-            this.btnStarRailSwitch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStarRailSwitch.Margin = new System.Windows.Forms.Padding(4);
             this.btnStarRailSwitch.Name = "btnStarRailSwitch";
             this.btnStarRailSwitch.Size = new System.Drawing.Size(135, 36);
             this.btnStarRailSwitch.TabIndex = 26;
@@ -644,7 +644,7 @@
             this.btnStarRailAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnStarRailAdd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnStarRailAdd.Location = new System.Drawing.Point(392, 202);
-            this.btnStarRailAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStarRailAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnStarRailAdd.Name = "btnStarRailAdd";
             this.btnStarRailAdd.Size = new System.Drawing.Size(135, 33);
             this.btnStarRailAdd.TabIndex = 25;
@@ -675,14 +675,13 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.设置ToolStripMenuItem,
             this.帮助ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(574, 34);
+            this.menuStrip1.Size = new System.Drawing.Size(574, 25);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -693,7 +692,7 @@
             this.DisplayGenshinCloudTabToolStripMenuItem,
             this.DisplayStarRailTabToolStripMenuItem});
             this.设置ToolStripMenuItem.Name = "设置ToolStripMenuItem";
-            this.设置ToolStripMenuItem.Size = new System.Drawing.Size(98, 28);
+            this.设置ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
             this.设置ToolStripMenuItem.Text = "界面显示";
             // 
             // DisplayGenshinTabToolStripMenuItem
@@ -701,7 +700,7 @@
             this.DisplayGenshinTabToolStripMenuItem.Checked = true;
             this.DisplayGenshinTabToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.DisplayGenshinTabToolStripMenuItem.Name = "DisplayGenshinTabToolStripMenuItem";
-            this.DisplayGenshinTabToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
+            this.DisplayGenshinTabToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.DisplayGenshinTabToolStripMenuItem.Text = "原神";
             this.DisplayGenshinTabToolStripMenuItem.Click += new System.EventHandler(this.DisplayGenshinTabToolStripMenuItem_Click);
             // 
@@ -710,7 +709,7 @@
             this.DisplayGenshinCloudTabToolStripMenuItem.Checked = true;
             this.DisplayGenshinCloudTabToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.DisplayGenshinCloudTabToolStripMenuItem.Name = "DisplayGenshinCloudTabToolStripMenuItem";
-            this.DisplayGenshinCloudTabToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
+            this.DisplayGenshinCloudTabToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.DisplayGenshinCloudTabToolStripMenuItem.Text = "云·原神";
             this.DisplayGenshinCloudTabToolStripMenuItem.Click += new System.EventHandler(this.DisplayGenshinCloudTabToolStripMenuItem_Click);
             // 
@@ -719,7 +718,7 @@
             this.DisplayStarRailTabToolStripMenuItem.Checked = true;
             this.DisplayStarRailTabToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.DisplayStarRailTabToolStripMenuItem.Name = "DisplayStarRailTabToolStripMenuItem";
-            this.DisplayStarRailTabToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
+            this.DisplayStarRailTabToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.DisplayStarRailTabToolStripMenuItem.Text = "崩坏：星穹铁道";
             this.DisplayStarRailTabToolStripMenuItem.Click += new System.EventHandler(this.DisplayStarRailTabToolStripMenuItem_Click);
             // 
@@ -729,20 +728,20 @@
             this.主页ToolStripMenuItem,
             this.请作者喝咖啡ToolStripMenuItem});
             this.帮助ToolStripMenuItem.Name = "帮助ToolStripMenuItem";
-            this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(62, 28);
+            this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.帮助ToolStripMenuItem.Text = "帮助";
             // 
             // 主页ToolStripMenuItem
             // 
             this.主页ToolStripMenuItem.Name = "主页ToolStripMenuItem";
-            this.主页ToolStripMenuItem.Size = new System.Drawing.Size(218, 34);
+            this.主页ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.主页ToolStripMenuItem.Text = "主页";
             this.主页ToolStripMenuItem.Click += new System.EventHandler(this.主页ToolStripMenuItem_Click);
             // 
             // 请作者喝咖啡ToolStripMenuItem
             // 
             this.请作者喝咖啡ToolStripMenuItem.Name = "请作者喝咖啡ToolStripMenuItem";
-            this.请作者喝咖啡ToolStripMenuItem.Size = new System.Drawing.Size(218, 34);
+            this.请作者喝咖啡ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.请作者喝咖啡ToolStripMenuItem.Text = "请作者喝咖啡";
             this.请作者喝咖啡ToolStripMenuItem.Click += new System.EventHandler(this.请作者喝咖啡ToolStripMenuItem_Click);
             // 
@@ -761,19 +760,19 @@
             this.显示主界面ToolStripMenuItem,
             this.退出ToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(171, 64);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(137, 48);
             // 
             // 显示主界面ToolStripMenuItem
             // 
             this.显示主界面ToolStripMenuItem.Name = "显示主界面ToolStripMenuItem";
-            this.显示主界面ToolStripMenuItem.Size = new System.Drawing.Size(170, 30);
+            this.显示主界面ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.显示主界面ToolStripMenuItem.Text = "显示主界面";
             this.显示主界面ToolStripMenuItem.Click += new System.EventHandler(this.显示主界面ToolStripMenuItem_Click);
             // 
             // 退出ToolStripMenuItem
             // 
             this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
-            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(170, 30);
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
@@ -786,8 +785,9 @@
             this.Controls.Add(this.menuStrip1);
             this.Icon = global::MiHoYoStarter.Properties.Resources.hutao;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MHY启动器";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormMain_FormClosed);
             this.Load += new System.EventHandler(this.FormMain_Load);
