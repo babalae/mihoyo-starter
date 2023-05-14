@@ -135,7 +135,7 @@ namespace MiHoYoStarter
                     dialog.Filter = "崩坏：星穹铁道|StarRail.exe|可执行文件(*.exe)|*.exe";
                     break;
                 case "HonkaiImpact3":
-                    dialog.Filter = "崩坏3|HonkaiImpact3.exe|可执行文件(*.exe)|*.exe";
+                    dialog.Filter = "崩坏3|BH3.exe|可执行文件(*.exe)|*.exe";
                     break;
             }
             
