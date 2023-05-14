@@ -82,6 +82,9 @@ namespace MiHoYoStarter
                         case "StarRail":
                             path = Path.Combine(installPath, "Game", "StarRail.exe");
                             break;
+                        case "HonkaiImpact3":
+                            path = Path.Combine(installPath, "Game", "BH3.exe");
+                            break;
                     }
 
                     if (path != null && File.Exists(path))
@@ -131,6 +134,9 @@ namespace MiHoYoStarter
                 case "StarRail":
                     dialog.Filter = "崩坏：星穹铁道|StarRail.exe|可执行文件(*.exe)|*.exe";
                     break;
+                case "HonkaiImpact3":
+                    dialog.Filter = "崩坏3|HonkaiImpact3.exe|可执行文件(*.exe)|*.exe";
+                    break;
             }
             
             if (dialog.ShowDialog() == DialogResult.OK)
@@ -141,7 +147,8 @@ namespace MiHoYoStarter
 以下是游戏本体执行文件的路径：
 原神(国服)：\Genshin Impact\Genshin Impact Game\YuanShen.exe
 云·原神：\Genshin Impact Cloud Game\Genshin Impact Cloud Game.exe
-崩坏：星穹铁道：\Star Rail\Game\StarRail.exe";
+崩坏：星穹铁道：\Star Rail\Game\StarRail.exe
+崩坏3：\Star Rail\Game\StarRail.exe";
                     MessageBox.Show(msg, "提示");
                     return;
                 }
@@ -296,7 +303,7 @@ namespace MiHoYoStarter
         /// 从注册表中寻找安装路径
         /// </summary>
         /// <param name="uninstallKeyName">
-        /// 安装信息的注册表键名 "原神", "云·原神", "崩坏：星穹铁道"
+        /// 安装信息的注册表键名 "原神", "云·原神", "崩坏：星穹铁道","崩坏3"
         /// </param>
         /// <returns>安装路径</returns>
         public static string FindInstallPathFromRegistry(string uninstallKeyName)
@@ -322,6 +329,6 @@ namespace MiHoYoStarter
                 Console.WriteLine(e.Message);
             }
             return null;
-        }
+        }  
     }
 }

@@ -22,6 +22,7 @@ namespace MiHoYoStarter
         private GameFormControl genshinFormControl = new GameFormControl("原神", "原神", "Genshin", "YuanShen");
         private GameFormControl genshinCloudFormControl = new GameFormControl("云·原神", "云原神", "GenshinCloud", "Genshin Impact Cloud Game");
         private GameFormControl starRailFormControl = new GameFormControl("崩坏：星穹铁道", "崩铁", "StarRail", "StarRail");
+        private GameFormControl honkaiImpact3FormControl = new GameFormControl("崩坏3", "崩坏3", "HonkaiImpact3", "BH3");
 
         public FormMain()
         {
@@ -39,14 +40,17 @@ namespace MiHoYoStarter
             genshinFormControl.InitControl(this, tabPageGenshin, Properties.Settings.Default.GenshinPath);
             genshinCloudFormControl.InitControl(this, tabPageGenshinCloud, Properties.Settings.Default.GenshinCloudPath);
             starRailFormControl.InitControl(this, tabPageSatrRail, Properties.Settings.Default.StarRailPath);
+            honkaiImpact3FormControl.InitControl(this, tabPageHonkaiImpact3, Properties.Settings.Default.HonkaiImpact3Path);
 
             // 默认配置初始化
             DisplayGenshinTabToolStripMenuItem.Checked = Properties.Settings.Default.DisplayGenshinEnabled;
             DisplayGenshinCloudTabToolStripMenuItem.Checked = Properties.Settings.Default.DisplayGenshinCloudEnabled;
             DisplayStarRailTabToolStripMenuItem.Checked = Properties.Settings.Default.DisplayStarRailEnabled;
+            DisplayHonkaiImpact3TabToolStripMenuItem.Checked = Properties.Settings.Default.DisplayHonkaiImpact3Enabled;
 
             txtGenshinStartParam.Text = Properties.Settings.Default.GenshinStartParam;
             txtStarRailStartParam.Text = Properties.Settings.Default.StarRailStartParam;
+            txtHonkaiImpact3StartParam.Text = Properties.Settings.Default.HonkaiImpact3StartParam;
 
             RefreshTab();
         }
@@ -54,20 +58,25 @@ namespace MiHoYoStarter
         public void RefreshNotifyIconContextMenu()
         {
             this.contextMenuStrip1.Items.Clear();
-            if (DisplayGenshinTabToolStripMenuItem.Checked)
+            if (DisplayGenshinTabToolStripMenuItem.Checked && genshinFormControl.AcctMenuItemList.Count > 0)
             {
                 this.contextMenuStrip1.Items.AddRange(genshinFormControl.AcctMenuItemList.ToArray());
                 this.contextMenuStrip1.Items.Add(new ToolStripSeparator());
             }
 
-            if (DisplayGenshinCloudTabToolStripMenuItem.Checked)
+            if (DisplayGenshinCloudTabToolStripMenuItem.Checked && genshinCloudFormControl.AcctMenuItemList.Count > 0)
             {
                 this.contextMenuStrip1.Items.AddRange(genshinCloudFormControl.AcctMenuItemList.ToArray());
                 this.contextMenuStrip1.Items.Add(new ToolStripSeparator());
             }
-            if (DisplayStarRailTabToolStripMenuItem.Checked)
+            if (DisplayStarRailTabToolStripMenuItem.Checked && starRailFormControl.AcctMenuItemList.Count > 0)
             {
                 this.contextMenuStrip1.Items.AddRange(starRailFormControl.AcctMenuItemList.ToArray());
+                this.contextMenuStrip1.Items.Add(new ToolStripSeparator()); ;
+            }
+            if (DisplayHonkaiImpact3TabToolStripMenuItem.Checked && honkaiImpact3FormControl.AcctMenuItemList.Count > 0)
+            {
+                this.contextMenuStrip1.Items.AddRange(honkaiImpact3FormControl.AcctMenuItemList.ToArray());
                 this.contextMenuStrip1.Items.Add(new ToolStripSeparator()); ;
             }
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -152,6 +161,13 @@ namespace MiHoYoStarter
             RefreshNotifyIconContextMenu();
         }
 
+        private void DisplayHonkaiImpact3TabToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DisplayHonkaiImpact3TabToolStripMenuItem.Checked = !DisplayHonkaiImpact3TabToolStripMenuItem.Checked;
+            RefreshTab();
+            RefreshNotifyIconContextMenu();
+        }
+
         public void RefreshTab()
         {
             if (DisplayGenshinTabToolStripMenuItem.Checked)
@@ -224,15 +240,20 @@ namespace MiHoYoStarter
             Properties.Settings.Default.DisplayGenshinEnabled = DisplayGenshinTabToolStripMenuItem.Checked;
             Properties.Settings.Default.DisplayGenshinCloudEnabled = DisplayGenshinCloudTabToolStripMenuItem.Checked;
             Properties.Settings.Default.DisplayStarRailEnabled = DisplayStarRailTabToolStripMenuItem.Checked;
-            
+            Properties.Settings.Default.DisplayHonkaiImpact3Enabled = DisplayHonkaiImpact3TabToolStripMenuItem.Checked;
+
             Properties.Settings.Default.GenshinPath = txtGenshinPath.Text;
             Properties.Settings.Default.GenshinCloudPath = txtGenshinCloudPath.Text;
             Properties.Settings.Default.StarRailPath = txtStarRailPath.Text;
+            Properties.Settings.Default.HonkaiImpact3Path = txtHonkaiImpact3Path.Text;
 
             Properties.Settings.Default.GenshinStartParam = txtGenshinStartParam.Text;
             Properties.Settings.Default.StarRailStartParam = txtStarRailStartParam.Text;
+            Properties.Settings.Default.HonkaiImpact3StartParam = txtHonkaiImpact3StartParam.Text;
 
             Properties.Settings.Default.Save();
         }
+
+
     }
 }

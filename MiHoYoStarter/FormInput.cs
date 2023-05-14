@@ -41,6 +41,10 @@ namespace MiHoYoStarter
             {
                 acct = new StarRailAccount();
             }
+            else if (gameNameEN == "HonkaiImpact3")
+            {
+                acct = new HonkaiImpact3Account();
+            }
             else
             {
                 MessageBox.Show("未知的游戏账户类型", "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);

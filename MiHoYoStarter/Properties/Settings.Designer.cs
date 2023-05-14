@@ -118,5 +118,41 @@ namespace MiHoYoStarter.Properties {
                 this["StarRailStartParam"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string HonkaiImpact3Path {
+            get {
+                return ((string)(this["HonkaiImpact3Path"]));
+            }
+            set {
+                this["HonkaiImpact3Path"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string HonkaiImpact3StartParam {
+            get {
+                return ((string)(this["HonkaiImpact3StartParam"]));
+            }
+            set {
+                this["HonkaiImpact3StartParam"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool DisplayHonkaiImpact3Enabled {
+            get {
+                return ((bool)(this["DisplayHonkaiImpact3Enabled"]));
+            }
+            set {
+                this["DisplayHonkaiImpact3Enabled"] = value;
+            }
+        }
     }
 }
