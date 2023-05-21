@@ -212,6 +212,20 @@ namespace MiHoYoStarter
                     tab1.TabPages.Remove(tabPageSatrRail);
                 }
             }
+            if (DisplayHonkaiImpact3TabToolStripMenuItem.Checked)
+            {
+                if (!tab1.TabPages.Contains(tabPageHonkaiImpact3))
+                {
+                    tab1.TabPages.Add(tabPageHonkaiImpact3);
+                }
+            }
+            else
+            {
+                if (tab1.TabPages.Contains(tabPageHonkaiImpact3))
+                {
+                    tab1.TabPages.Remove(tabPageHonkaiImpact3);
+                }
+            }
         }
 
         private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
