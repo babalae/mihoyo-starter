@@ -268,7 +268,7 @@ namespace MiHoYoStarter
 
 
             var pros = Process.GetProcessesByName(ProcessName);
-            if (pros.Any())
+            if (pros.Any() && ProcessName != "StarRail")
             {
                 pros[0].Kill();
                 Thread.Sleep(200);
