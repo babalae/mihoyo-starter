@@ -238,11 +238,13 @@ namespace MiHoYoStarter
 
             try
             {
-                ProcessStartInfo startInfo = new ProcessStartInfo();
-                startInfo.UseShellExecute = true;
-                startInfo.WorkingDirectory = Environment.CurrentDirectory;
-                startInfo.FileName = txtPath.Text;
-                startInfo.Verb = "runas";
+                ProcessStartInfo startInfo = new ProcessStartInfo
+                {
+                    UseShellExecute = true,
+                    WorkingDirectory = Environment.CurrentDirectory,
+                    FileName = txtPath.Text,
+                    Verb = "runas"
+                };
                 if (txtStartParam != null && !string.IsNullOrEmpty(txtStartParam.Text))
                 {
                     startInfo.Arguments = txtStartParam.Text;
@@ -339,7 +341,7 @@ namespace MiHoYoStarter
             formMain.UpdateBottomLabel($"账户切换至【{name}】成功！");
             if (chkAutoStart.Checked)
             {
-                if (pros.Any())
+                if (pros.Any() && ProcessName != "StarRail")
                 {
                     pros[0].Kill();
                     Thread.Sleep(200);
