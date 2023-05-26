@@ -6,7 +6,7 @@
 
 [老版本](https://github.com/babalae/genshin-account)只支持原神，现在看看MHY现在游戏基本都是一样的账号信息存储方式，顺手就重写了下（复制粘贴了下）。
 
-[📥Github下载（1.7）](https://github.com/babalae/mihoyo-starter/releases/download/1.9/MiHoYoStarter.1.9.zip)
+[📥Github下载（1.9）](https://github.com/babalae/mihoyo-starter/releases/download/1.9/MiHoYoStarter.1.9.zip)
 
 ## 截图
 ![Screenshot](https://raw.githubusercontent.com/babalae/mihoyo-starter/main/Document/Screenshot.gif)
