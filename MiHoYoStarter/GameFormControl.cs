@@ -159,7 +159,7 @@ namespace MiHoYoStarter
 原神(国服)：\Genshin Impact\Genshin Impact Game\YuanShen.exe
 云·原神：\Genshin Impact Cloud Game\Genshin Impact Cloud Game.exe
 崩坏：星穹铁道：\Star Rail\Game\StarRail.exe
-崩坏3：\Star Rail\Game\StarRail.exe";
+崩坏3：\Honkai Impact 3rd\Game\BH3.exe";
                     MessageBox.Show(msg, "提示");
                     return;
                 }
