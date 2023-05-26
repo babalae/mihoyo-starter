@@ -16,10 +16,12 @@ namespace MiHoYoStarter
     {
         private string userDataPath;
         public string GameNameCN { get; set; }
+
         /// <summary>
         /// 游戏简称
         /// </summary>
         public string GameNameShortCN { get; set; }
+
         public string GameNameEN { get; set; }
 
         public string ProcessName { get; set; }
@@ -33,6 +35,9 @@ namespace MiHoYoStarter
         private Button btnAdd;
         private Button btnSwitch;
         private Button btnDelete;
+        private Button btnStart;
+
+        private CheckBox chkAutoStart;
 
         public List<ToolStripMenuItem> AcctMenuItemList { get; set; }
 
@@ -63,6 +68,8 @@ namespace MiHoYoStarter
             FindControl(tabPage, $"btn{GameNameEN}Add", ref btnAdd);
             FindControl(tabPage, $"btn{GameNameEN}Switch", ref btnSwitch);
             FindControl(tabPage, $"btn{GameNameEN}Delete", ref btnDelete);
+            FindControl(tabPage, $"btn{GameNameEN}Start", ref btnStart);
+            FindControl(tabPage, $"chk{GameNameEN}AutoStart", ref chkAutoStart);
 
             // 默认路径
             if (string.IsNullOrEmpty(pathSetting))
@@ -103,6 +110,10 @@ namespace MiHoYoStarter
             btnAdd.Click += btnAddClick;
             btnSwitch.Click += btnSwitchClick;
             btnDelete.Click += btnDeleteClick;
+            if (btnStart != null)
+            {
+                btnStart.Click += btnhStartClick;
+            }
             lvwAcct.MouseDoubleClick += lvwAcct_MouseDoubleClick;
 
             RefreshList();
@@ -120,7 +131,7 @@ namespace MiHoYoStarter
         private void btnChoosePathClick(object sender, EventArgs e)
         {
             var dialog = new OpenFileDialog();
-            dialog.Multiselect = false;//是否可以选择多个文件
+            dialog.Multiselect = false; //是否可以选择多个文件
             dialog.Title = "请选择游戏启动程序（注意不是游戏启动器 launcher.exe！）";
             //选择某种类型的文件
             switch (GameNameEN)
@@ -138,7 +149,7 @@ namespace MiHoYoStarter
                     dialog.Filter = "崩坏3|BH3.exe|可执行文件(*.exe)|*.exe";
                     break;
             }
-            
+
             if (dialog.ShowDialog() == DialogResult.OK)
             {
                 if (dialog.FileName.EndsWith("launcher.exe"))
@@ -152,6 +163,7 @@ namespace MiHoYoStarter
                     MessageBox.Show(msg, "提示");
                     return;
                 }
+
                 txtPath.Text = dialog.FileName;
             }
         }
@@ -167,19 +179,24 @@ namespace MiHoYoStarter
         {
             if (string.IsNullOrEmpty(txtPath.Text))
             {
-                MessageBox.Show($"请先选择【{GameNameCN}】游戏启动程序路径，才能进行账户切换", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"请先选择【{GameNameCN}】游戏启动程序路径，才能进行账户切换", "提示", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
                 return;
             }
+
             if (!txtPath.Text.ToLower().EndsWith("exe"))
             {
-                MessageBox.Show($"请先选择正确游戏启动程序路径（注意不是目录，是exe可执行文件）", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"请先选择正确游戏启动程序路径（注意不是目录，是exe可执行文件）", "提示", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
                 return;
             }
+
             if (lvwAcct.SelectedItems.Count == 0)
             {
                 MessageBox.Show("请选择要切换的账号", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+
             string name = lvwAcct.SelectedItems[0]?.Text;
             Switch(name);
         }
@@ -191,14 +208,53 @@ namespace MiHoYoStarter
                 MessageBox.Show("请选择要切换的账号", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+
             string name = lvwAcct.SelectedItems[0]?.Text;
             if (string.IsNullOrEmpty(name))
             {
                 MessageBox.Show("请选择要切换的账号", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+
             MiHoYoAccount.DeleteFromDisk(userDataPath, name);
             RefreshList();
+        }
+
+        private void btnhStartClick(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtPath.Text))
+            {
+                MessageBox.Show($"请先选择【{GameNameCN}】游戏启动程序路径，才能启动游戏", "提示", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                return;
+            }
+
+            if (!txtPath.Text.ToLower().EndsWith("exe"))
+            {
+                MessageBox.Show($"请先选择正确游戏启动程序路径（注意不是目录，是exe可执行文件）", "提示", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                return;
+            }
+
+            try
+            {
+                ProcessStartInfo startInfo = new ProcessStartInfo();
+                startInfo.UseShellExecute = true;
+                startInfo.WorkingDirectory = Environment.CurrentDirectory;
+                startInfo.FileName = txtPath.Text;
+                startInfo.Verb = "runas";
+                if (txtStartParam != null && !string.IsNullOrEmpty(txtStartParam.Text))
+                {
+                    startInfo.Arguments = txtStartParam.Text;
+                }
+
+                Process.Start(startInfo);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("游戏启动失败！\n" + ex.Message + "\n" + ex.StackTrace, "错误", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
         }
 
         private void lvwAcct_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -242,6 +298,7 @@ namespace MiHoYoStarter
                 btnDelete.Enabled = false;
                 btnSwitch.Enabled = false;
             }
+
             formMain.RefreshNotifyIconContextMenu(); // 调用主界面刷新菜单
         }
 
@@ -254,6 +311,7 @@ namespace MiHoYoStarter
                 {
                     menuItem.Checked = false;
                 }
+
                 toolStripMenuItem.Checked = true;
             }
         }
@@ -268,34 +326,44 @@ namespace MiHoYoStarter
 
 
             var pros = Process.GetProcessesByName(ProcessName);
-            if (pros.Any() && ProcessName != "StarRail")
-            {
-                pros[0].Kill();
-                Thread.Sleep(200);
-            }
+
+
             MiHoYoAccount acct = MiHoYoAccount.CreateFromDisk(userDataPath, name);
             if (string.IsNullOrWhiteSpace(acct.AccountRegDataValue))
             {
                 MessageBox.Show("账户内容为空", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
             acct.WriteToRegistry();
-            try
+            formMain.UpdateBottomLabel($"账户切换至【{name}】成功！");
+            if (chkAutoStart.Checked)
             {
-                ProcessStartInfo startInfo = new ProcessStartInfo();
-                startInfo.UseShellExecute = true;
-                startInfo.WorkingDirectory = Environment.CurrentDirectory;
-                startInfo.FileName = txtPath.Text;
-                startInfo.Verb = "runas";
-                if (txtStartParam != null && !string.IsNullOrEmpty(txtStartParam.Text))
+                if (pros.Any())
                 {
-                    startInfo.Arguments = txtStartParam.Text;
+                    pros[0].Kill();
+                    Thread.Sleep(200);
                 }
-                Process.Start(startInfo);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("游戏启动失败！\n" + ex.Message + "\n" + ex.StackTrace, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                try
+                {
+                    ProcessStartInfo startInfo = new ProcessStartInfo();
+                    startInfo.UseShellExecute = true;
+                    startInfo.WorkingDirectory = Environment.CurrentDirectory;
+                    startInfo.FileName = txtPath.Text;
+                    startInfo.Verb = "runas";
+                    if (txtStartParam != null && !string.IsNullOrEmpty(txtStartParam.Text))
+                    {
+                        startInfo.Arguments = txtStartParam.Text;
+                    }
+
+                    Process.Start(startInfo);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("游戏启动失败！\n" + ex.Message + "\n" + ex.StackTrace, "错误", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -311,12 +379,14 @@ namespace MiHoYoStarter
             try
             {
                 using (var hklm = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64))
-                using (var key = hklm.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\" + uninstallKeyName))
+                using (var key = hklm.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\" +
+                                                 uninstallKeyName))
                 {
                     if (key == null)
                     {
                         return null;
                     }
+
                     var installLocation = key.GetValue("InstallPath");
                     if (installLocation != null && !string.IsNullOrEmpty(installLocation.ToString()))
                     {
@@ -328,7 +398,8 @@ namespace MiHoYoStarter
             {
                 Console.WriteLine(e.Message);
             }
+
             return null;
-        }  
+        }
     }
 }

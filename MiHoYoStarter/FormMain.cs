@@ -52,6 +52,11 @@ namespace MiHoYoStarter
             txtStarRailStartParam.Text = Properties.Settings.Default.StarRailStartParam;
             txtHonkaiImpact3StartParam.Text = Properties.Settings.Default.HonkaiImpact3StartParam;
 
+            chkGenshinAutoStart.Checked = Properties.Settings.Default.GenshinAutoStartEnabled;
+            chkGenshinCloudAutoStart.Checked = Properties.Settings.Default.GenshinCloudAutoStartEnabled;
+            chkStarRailAutoStart.Checked = Properties.Settings.Default.StarRailAutoStartEnabled;
+            chkHonkaiImpact3AutoStart.Checked = Properties.Settings.Default.HonkaiImpact3AutoStartEnabled;
+
             RefreshTab();
         }
 
@@ -265,9 +270,18 @@ namespace MiHoYoStarter
             Properties.Settings.Default.StarRailStartParam = txtStarRailStartParam.Text;
             Properties.Settings.Default.HonkaiImpact3StartParam = txtHonkaiImpact3StartParam.Text;
 
+
+            Properties.Settings.Default.GenshinAutoStartEnabled = chkGenshinAutoStart.Checked;
+            Properties.Settings.Default.GenshinCloudAutoStartEnabled = chkGenshinCloudAutoStart.Checked;
+            Properties.Settings.Default.StarRailAutoStartEnabled = chkStarRailAutoStart.Checked;
+            Properties.Settings.Default.HonkaiImpact3AutoStartEnabled = chkHonkaiImpact3AutoStart.Checked;
+
             Properties.Settings.Default.Save();
         }
 
-
+        public void UpdateBottomLabel(string info)
+        {
+            this.toolStripStatusLabel1.Text = info;
+        }
     }
 }
