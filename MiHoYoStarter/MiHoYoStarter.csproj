@@ -66,6 +66,7 @@
     <Compile Include="GameFormControl.cs" />
     <Compile Include="GenshinCloudAccount.cs" />
     <Compile Include="HonkaiImpact3Account.cs" />
+    <Compile Include="StarRailOverseaAccount.cs" />
     <Compile Include="StarRailAccount.cs" />
     <Compile Include="GenshinAccount.cs" />
     <Compile Include="MiHoYoAccount.cs" />

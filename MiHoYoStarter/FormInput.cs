@@ -41,6 +41,10 @@ namespace MiHoYoStarter
             {
                 acct = new StarRailAccount();
             }
+            else if (gameNameEN == "StarRail*")
+            {
+                acct = new StarRailOverseaAccount();
+            }
             else if (gameNameEN == "HonkaiImpact3")
             {
                 acct = new HonkaiImpact3Account();

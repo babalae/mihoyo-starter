@@ -113,7 +113,7 @@ namespace MiHoYoStarter
         {
             try
             {
-                var value = Registry.GetValue(@"HKEY_CURRENT_USER\Software\miHoYo\崩坏：星穹铁道",
+                var value = Registry.GetValue(getStarRailRegistryPath(),
                     "GraphicsSettings_Model_h2986158309", null);
                 if (value != null)
                 {
@@ -124,7 +124,7 @@ namespace MiHoYoStarter
                     if (r.IsMatch(json))
                     {
                         string newJson = r.Replace(json, $"\"FPS\":{numericUpDownFPS.Value},");
-                        Registry.SetValue(@"HKEY_CURRENT_USER\Software\miHoYo\崩坏：星穹铁道",
+                        Registry.SetValue(getStarRailRegistryPath(),
                             "GraphicsSettings_Model_h2986158309", Encoding.UTF8.GetBytes(newJson));
                         MessageBox.Show("应用成功！", "提示");
                     }
@@ -283,5 +283,32 @@ namespace MiHoYoStarter
         {
             this.toolStripStatusLabel1.Text = info;
         }
+
+        public string getStarRailRegistryPath() {
+            string[] path = {
+                @"HKEY_CURRENT_USER\Software\miHoYo\崩坏：星穹铁道",
+                @"HKEY_CURRENT_USER\Software\Cognosphere\Star Rail"
+            };
+            
+            return path[comboStarRailServer.SelectedIndex];
+        }
+
+        private void comboStarRailServer_SelectedIndexChanged(object sender, EventArgs e) {
+            if (comboStarRailServer.SelectedIndex == 0) {
+                starRailFormControl.IsOversea = false;
+            }
+            else {
+                starRailFormControl.IsOversea = true;
+            }
+        }
+
+        //public string getStarRailRegistryKey() {
+        //    string[] path = {
+        //        "MIHOYOSDK_ADL_PROD_CN_h3123967166",
+        //        "MIHOYOSDK_ADL_PROD_OVERSEA_h1158948810"
+        //    };
+
+        //    return path[comboStarRailServer.SelectedIndex];
+        //}
     }
 }
