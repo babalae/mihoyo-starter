@@ -26,6 +26,8 @@ namespace MiHoYoStarter
 
         public string ProcessName { get; set; }
 
+        public bool IsOversea { get; set; }
+
         private FormMain formMain;
 
         private TextBox txtPath;
@@ -99,6 +101,31 @@ namespace MiHoYoStarter
                         txtPath.Text = path;
                     }
                 }
+                else {
+                    string installPathOversea = FindInstallPathFromRegistry(GameNameEN);
+
+                    if (installPathOversea != null) {
+                        string path = null;
+                        switch (GameNameEN) {
+                            case "Genshin":
+                                path = Path.Combine(installPathOversea, "Genshin Impact Game", "YuanShen.exe"); // 只支持国服
+                                break;
+                            case "GenshinCloud":
+                                path = Path.Combine(installPathOversea, "Genshin Impact Cloud Game.exe");
+                                break;
+                            case "StarRail":
+                                path = Path.Combine(installPathOversea, "Game", "StarRail.exe");
+                                break;
+                            case "HonkaiImpact3":
+                                path = Path.Combine(installPathOversea, "Game", "BH3.exe");
+                                break;
+                        }
+
+                        if (path != null && File.Exists(path)) {
+                            txtPath.Text = path;
+                        }
+                    }
+                }
             }
             else
             {
@@ -170,7 +197,13 @@ namespace MiHoYoStarter
 
         private void btnAddClick(object sender, EventArgs e)
         {
-            FormInput form = new FormInput(GameNameEN);
+            string GameNameENX = GameNameEN;
+            if (IsOversea)
+            {
+                GameNameENX += "*";
+            }
+
+            FormInput form = new FormInput(GameNameENX);
             form.ShowDialog();
             RefreshList();
         }
