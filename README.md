@@ -36,6 +36,10 @@
     * 云·原神：`\Genshin Impact Cloud Game\Genshin Impact Cloud Game.exe`
     * 崩坏：星穹铁道：`\Star Rail\Game\StarRail.exe`
 
+## 问题反馈
+
+提 [Issue](https://github.com/babalae/mihoyo-starter/issues) 或 QQ群894935931
+ 
 
 ## 投喂
 
