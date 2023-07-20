@@ -1,3 +1,5 @@
+更多： [🎲七圣召唤自动打牌](https://github.com/babalae/genius-invokation-auto-toy) | [🐟 自动钓鱼机](https://github.com/babalae/genshin-fishing-toy) 
+
 # 🛠 MHY启动器
 
 原神、云·原神、崩坏：星穹铁道、崩坏三 多账号快速切换工具，只支持国服（因为我不用外服哒）。
