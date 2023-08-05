@@ -230,6 +230,11 @@ namespace MiHoYoStarter
 
         private void btnAddClick(object sender, EventArgs e)
         {
+            // 是否国际服
+            if (cboServer != null)
+            {
+                IsOversea = cboServer.SelectedIndex == 1;
+            }
             string GameNameENX = GameNameEN;
             if (IsOversea)
             {

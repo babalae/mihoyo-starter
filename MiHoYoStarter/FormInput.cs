@@ -13,6 +13,7 @@ namespace MiHoYoStarter
     public partial class FormInput : Form
     {
         private string gameNameEN;
+
         public FormInput(string gameNameEN)
         {
             InitializeComponent();
@@ -27,41 +28,48 @@ namespace MiHoYoStarter
                 return;
             }
 
-            MiHoYoAccount acct = null;
-            if (gameNameEN == "Genshin")
+            try
             {
-                acct = new GenshinAccount();
-                
+                MiHoYoAccount acct = null;
+                if (gameNameEN == "Genshin")
+                {
+                    acct = new GenshinAccount();
+                }
+                else if (gameNameEN == "Genshin*")
+                {
+                    acct = new GenshinOverseaAccount();
+                }
+                else if (gameNameEN == "GenshinCloud")
+                {
+                    acct = new GenshinCloudAccount();
+                }
+                else if (gameNameEN == "StarRail")
+                {
+                    acct = new StarRailAccount();
+                }
+                else if (gameNameEN == "StarRail*")
+                {
+                    acct = new StarRailOverseaAccount();
+                }
+                else if (gameNameEN == "HonkaiImpact3")
+                {
+                    acct = new HonkaiImpact3Account();
+                }
+                else
+                {
+                    MessageBox.Show("未知的游戏账户类型", "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                acct.ReadFromRegistry();
+                acct.Name = txtAcctName.Text;
+                acct.WriteToDisk();
+                this.Close();
             }
-            else if (gameNameEN == "Genshin*")
+            catch (Exception ex)
             {
-                acct = new GenshinOverseaAccount();
+                MessageBox.Show(ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (gameNameEN == "GenshinCloud")
-            {
-                acct = new GenshinCloudAccount();
-            }
-            else if (gameNameEN == "StarRail")
-            {
-                acct = new StarRailAccount();
-            }
-            else if (gameNameEN == "StarRail*")
-            {
-                acct = new StarRailOverseaAccount();
-            }
-            else if (gameNameEN == "HonkaiImpact3")
-            {
-                acct = new HonkaiImpact3Account();
-            }
-            else
-            {
-                MessageBox.Show("未知的游戏账户类型", "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            acct.ReadFromRegistry();
-            acct.Name = txtAcctName.Text;
-            acct.WriteToDisk();
-            this.Close();
         }
     }
 }
