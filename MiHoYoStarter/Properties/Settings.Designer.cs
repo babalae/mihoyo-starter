@@ -202,5 +202,29 @@ namespace MiHoYoStarter.Properties {
                 this["GenshinCloudAutoStartEnabled"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int GenshinServerIndex {
+            get {
+                return ((int)(this["GenshinServerIndex"]));
+            }
+            set {
+                this["GenshinServerIndex"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int StarRailServerIndex {
+            get {
+                return ((int)(this["StarRailServerIndex"]));
+            }
+            set {
+                this["StarRailServerIndex"] = value;
+            }
+        }
     }
 }

@@ -64,6 +64,7 @@
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
     <Compile Include="GameFormControl.cs" />
+    <Compile Include="GenshinOverseaAccount.cs" />
     <Compile Include="GenshinCloudAccount.cs" />
     <Compile Include="HonkaiImpact3Account.cs" />
     <Compile Include="StarRailOverseaAccount.cs" />

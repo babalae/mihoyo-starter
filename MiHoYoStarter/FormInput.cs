@@ -33,6 +33,10 @@ namespace MiHoYoStarter
                 acct = new GenshinAccount();
                 
             }
+            else if (gameNameEN == "Genshin*")
+            {
+                acct = new GenshinOverseaAccount();
+            }
             else if (gameNameEN == "GenshinCloud")
             {
                 acct = new GenshinCloudAccount();

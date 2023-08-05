@@ -41,6 +41,8 @@ namespace MiHoYoStarter
 
         private CheckBox chkAutoStart;
 
+        private ComboBox cboServer;
+
         public List<ToolStripMenuItem> AcctMenuItemList { get; set; }
 
         public GameFormControl(string nameCN, string nameShortCN, string nameEN, string processName)
@@ -72,6 +74,9 @@ namespace MiHoYoStarter
             FindControl(tabPage, $"btn{GameNameEN}Delete", ref btnDelete);
             FindControl(tabPage, $"btn{GameNameEN}Start", ref btnStart);
             FindControl(tabPage, $"chk{GameNameEN}AutoStart", ref chkAutoStart);
+            FindControl(tabPage, $"cbo{GameNameEN}Server", ref cboServer);
+
+
 
             // 默认路径
             if (string.IsNullOrEmpty(pathSetting))
@@ -100,15 +105,30 @@ namespace MiHoYoStarter
                     {
                         txtPath.Text = path;
                     }
-                }
-                else {
-                    string installPathOversea = FindInstallPathFromRegistry(GameNameEN);
 
-                    if (installPathOversea != null) {
+                    if (cboServer != null)
+                    {
+                        cboServer.SelectedIndex = 0;
+                    }
+                }
+                else
+                {
+                    // 国际服
+                    string registryPathNameEn = GameNameEN;
+                    if ("Genshin" == GameNameEN)
+                    {
+                        registryPathNameEn = "Genshin Impact";
+                    }
+
+                    string installPathOversea = FindInstallPathFromRegistry(registryPathNameEn);
+
+                    if (installPathOversea != null)
+                    {
                         string path = null;
-                        switch (GameNameEN) {
+                        switch (GameNameEN)
+                        {
                             case "Genshin":
-                                path = Path.Combine(installPathOversea, "Genshin Impact Game", "YuanShen.exe"); // 只支持国服
+                                path = Path.Combine(installPathOversea, "Genshin Impact Game", "GenshinImpact.exe");
                                 break;
                             case "GenshinCloud":
                                 path = Path.Combine(installPathOversea, "Genshin Impact Cloud Game.exe");
@@ -121,10 +141,22 @@ namespace MiHoYoStarter
                                 break;
                         }
 
-                        if (path != null && File.Exists(path)) {
+                        if (path != null && File.Exists(path))
+                        {
                             txtPath.Text = path;
                         }
+
+                        if (cboServer != null)
+                        {
+                            cboServer.SelectedIndex = 1;
+                        }
                     }
+                }
+
+                // 是否国际服
+                if (cboServer != null)
+                {
+                    IsOversea = cboServer.SelectedIndex == 1;
                 }
             }
             else
@@ -141,6 +173,7 @@ namespace MiHoYoStarter
             {
                 btnStart.Click += btnhStartClick;
             }
+
             lvwAcct.MouseDoubleClick += lvwAcct_MouseDoubleClick;
 
             RefreshList();
