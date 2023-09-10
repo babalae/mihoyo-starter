@@ -205,25 +205,97 @@ namespace MiHoYoStarter.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int GenshinServerIndex {
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool GenshinOverseaAutoStartEnabled {
             get {
-                return ((int)(this["GenshinServerIndex"]));
+                return ((bool)(this["GenshinOverseaAutoStartEnabled"]));
             }
             set {
-                this["GenshinServerIndex"] = value;
+                this["GenshinOverseaAutoStartEnabled"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int StarRailServerIndex {
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool StarRailOverseaAutoStartEnabled {
             get {
-                return ((int)(this["StarRailServerIndex"]));
+                return ((bool)(this["StarRailOverseaAutoStartEnabled"]));
             }
             set {
-                this["StarRailServerIndex"] = value;
+                this["StarRailOverseaAutoStartEnabled"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string GenshinOverseaStartParam {
+            get {
+                return ((string)(this["GenshinOverseaStartParam"]));
+            }
+            set {
+                this["GenshinOverseaStartParam"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string StarRailOverseaStartParam {
+            get {
+                return ((string)(this["StarRailOverseaStartParam"]));
+            }
+            set {
+                this["StarRailOverseaStartParam"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool DisplayGenshinOverseaEnabled {
+            get {
+                return ((bool)(this["DisplayGenshinOverseaEnabled"]));
+            }
+            set {
+                this["DisplayGenshinOverseaEnabled"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool DisplayStarRailOverseaEnabled {
+            get {
+                return ((bool)(this["DisplayStarRailOverseaEnabled"]));
+            }
+            set {
+                this["DisplayStarRailOverseaEnabled"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string GenshinOverseaPath {
+            get {
+                return ((string)(this["GenshinOverseaPath"]));
+            }
+            set {
+                this["GenshinOverseaPath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string StarRailOverseaPath {
+            get {
+                return ((string)(this["StarRailOverseaPath"]));
+            }
+            set {
+                this["StarRailOverseaPath"] = value;
             }
         }
     }

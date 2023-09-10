@@ -26,8 +26,6 @@ namespace MiHoYoStarter
 
         public string ProcessName { get; set; }
 
-        public bool IsOversea { get; set; }
-
         private FormMain formMain;
 
         private TextBox txtPath;
@@ -40,8 +38,6 @@ namespace MiHoYoStarter
         private Button btnStart;
 
         private CheckBox chkAutoStart;
-
-        private ComboBox cboServer;
 
         public List<ToolStripMenuItem> AcctMenuItemList { get; set; }
 
@@ -74,7 +70,6 @@ namespace MiHoYoStarter
             FindControl(tabPage, $"btn{GameNameEN}Delete", ref btnDelete);
             FindControl(tabPage, $"btn{GameNameEN}Start", ref btnStart);
             FindControl(tabPage, $"chk{GameNameEN}AutoStart", ref chkAutoStart);
-            FindControl(tabPage, $"cbo{GameNameEN}Server", ref cboServer);
 
 
 
@@ -90,10 +85,16 @@ namespace MiHoYoStarter
                         case "Genshin":
                             path = Path.Combine(installPath, "Genshin Impact Game", "YuanShen.exe"); // 只支持国服
                             break;
+                        case "GenshinOversea":
+                            path = Path.Combine(installPath, "Genshin Impact Game", "GenshinImpact.exe");
+                            break;
                         case "GenshinCloud":
                             path = Path.Combine(installPath, "Genshin Impact Cloud Game.exe");
                             break;
                         case "StarRail":
+                            path = Path.Combine(installPath, "Game", "StarRail.exe");
+                            break;
+                        case "StarRailOversea":
                             path = Path.Combine(installPath, "Game", "StarRail.exe");
                             break;
                         case "HonkaiImpact3":
@@ -105,58 +106,6 @@ namespace MiHoYoStarter
                     {
                         txtPath.Text = path;
                     }
-
-                    if (cboServer != null)
-                    {
-                        cboServer.SelectedIndex = 0;
-                    }
-                }
-                else
-                {
-                    // 国际服
-                    string registryPathNameEn = GameNameEN;
-                    if ("Genshin" == GameNameEN)
-                    {
-                        registryPathNameEn = "Genshin Impact";
-                    }
-
-                    string installPathOversea = FindInstallPathFromRegistry(registryPathNameEn);
-
-                    if (installPathOversea != null)
-                    {
-                        string path = null;
-                        switch (GameNameEN)
-                        {
-                            case "Genshin":
-                                path = Path.Combine(installPathOversea, "Genshin Impact Game", "GenshinImpact.exe");
-                                break;
-                            case "GenshinCloud":
-                                path = Path.Combine(installPathOversea, "Genshin Impact Cloud Game.exe");
-                                break;
-                            case "StarRail":
-                                path = Path.Combine(installPathOversea, "Game", "StarRail.exe");
-                                break;
-                            case "HonkaiImpact3":
-                                path = Path.Combine(installPathOversea, "Game", "BH3.exe");
-                                break;
-                        }
-
-                        if (path != null && File.Exists(path))
-                        {
-                            txtPath.Text = path;
-                        }
-
-                        if (cboServer != null)
-                        {
-                            cboServer.SelectedIndex = 1;
-                        }
-                    }
-                }
-
-                // 是否国际服
-                if (cboServer != null)
-                {
-                    IsOversea = cboServer.SelectedIndex == 1;
                 }
             }
             else
@@ -197,13 +146,19 @@ namespace MiHoYoStarter
             switch (GameNameEN)
             {
                 case "Genshin":
-                    dialog.Filter = "原神国服|YuanShen.exe|可执行文件(*.exe)|*.exe";
+                    dialog.Filter = "原神|YuanShen.exe|可执行文件(*.exe)|*.exe";
+                    break;
+                case "GenshinOversea":
+                    dialog.Filter = "原神（国际服）|GenshinImpact.exe|可执行文件(*.exe)|*.exe";
                     break;
                 case "GenshinCloud":
                     dialog.Filter = "云原神|Genshin Impact Cloud Game.exe|可执行文件(*.exe)|*.exe";
                     break;
                 case "StarRail":
                     dialog.Filter = "崩坏：星穹铁道|StarRail.exe|可执行文件(*.exe)|*.exe";
+                    break;
+                case "StarRailOversea":
+                    dialog.Filter = "崩坏：星穹铁道（国际服）|StarRail.exe|可执行文件(*.exe)|*.exe";
                     break;
                 case "HonkaiImpact3":
                     dialog.Filter = "崩坏3|BH3.exe|可执行文件(*.exe)|*.exe";
@@ -216,7 +171,8 @@ namespace MiHoYoStarter
                 {
                     string msg = $@"请选择【{GameNameCN}】的游戏本体执行文件（注意不是启动器！！！）
 以下是游戏本体执行文件的路径：
-原神(国服)：\Genshin Impact\Genshin Impact Game\YuanShen.exe
+原神：\Genshin Impact\Genshin Impact Game\YuanShen.exe
+原神（国际服）：\Genshin Impact\Genshin Impact Game\GenshinImpact.exe
 云·原神：\Genshin Impact Cloud Game\Genshin Impact Cloud Game.exe
 崩坏：星穹铁道：\Star Rail\Game\StarRail.exe
 崩坏3：\Honkai Impact 3rd\Game\BH3.exe";
@@ -230,18 +186,7 @@ namespace MiHoYoStarter
 
         private void btnAddClick(object sender, EventArgs e)
         {
-            // 是否国际服
-            if (cboServer != null)
-            {
-                IsOversea = cboServer.SelectedIndex == 1;
-            }
-            string GameNameENX = GameNameEN;
-            if (IsOversea)
-            {
-                GameNameENX += "*";
-            }
-
-            FormInput form = new FormInput(GameNameENX);
+            FormInput form = new FormInput(GameNameEN);
             form.ShowDialog();
             RefreshList();
         }

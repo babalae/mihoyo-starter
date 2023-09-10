@@ -35,7 +35,7 @@ namespace MiHoYoStarter
                 {
                     acct = new GenshinAccount();
                 }
-                else if (gameNameEN == "Genshin*")
+                else if (gameNameEN == "GenshinOversea")
                 {
                     acct = new GenshinOverseaAccount();
                 }
@@ -47,7 +47,7 @@ namespace MiHoYoStarter
                 {
                     acct = new StarRailAccount();
                 }
-                else if (gameNameEN == "StarRail*")
+                else if (gameNameEN == "StarRailOversea")
                 {
                     acct = new StarRailOverseaAccount();
                 }
