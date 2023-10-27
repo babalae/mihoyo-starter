@@ -1,4 +1,4 @@
-更多： [🎲七圣召唤自动打牌](https://github.com/babalae/genius-invokation-auto-toy) | [🐟 自动钓鱼机](https://github.com/babalae/genshin-fishing-toy) 
+更多：**[🍨BetterGI · 更好的原神（七圣召唤自动打牌、自动钓鱼）](https://github.com/babalae/better-genshin-impact)** 
 
 # 🛠 MHY启动器
 
