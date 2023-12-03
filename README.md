@@ -40,7 +40,7 @@
 
 ## 问题反馈
 
-提 [Issue](https://github.com/babalae/mihoyo-starter/issues) 或 QQ群894935931
+提 [Issue](https://github.com/babalae/mihoyo-starter/issues)
  
 
 ## 投喂
