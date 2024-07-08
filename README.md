@@ -1,8 +1,12 @@
 更多：**[🍨BetterGI · 更好的原神（自动化工具合集）](https://github.com/babalae/better-genshin-impact)** | [🎲七圣召唤自动打牌](https://github.com/babalae/genius-invokation-auto-toy) | [🐟 自动钓鱼机](https://github.com/babalae/genshin-fishing-toy) 
 
+
+# 🛠 新增支持绝区零-20240708
+
+[📥Github下载（2.2）](https://github.com/qsuron0/mihoyo-starter/releases/tag/releases)
+
 # 🛠 MHY启动器
 
-20240708-新增支持绝区零
 
 原神、云·原神、崩坏：星穹铁道、崩坏三 多账号快速切换工具，支持国际服。
 
