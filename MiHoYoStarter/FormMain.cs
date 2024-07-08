@@ -24,6 +24,11 @@ namespace MiHoYoStarter
             new GameFormControl("云·原神", "云原神", "GenshinCloud", "Genshin Impact Cloud Game");
 
         private GameFormControl starRailFormControl = new GameFormControl("崩坏：星穹铁道", "崩铁", "StarRail", "StarRail");
+
+        private GameFormControl zzzFormControl =
+            new GameFormControl("绝区零", "绝区零", "ZZZ", "ZZZ");
+
+
         private GameFormControl honkaiImpact3FormControl = new GameFormControl("崩坏3", "崩坏3", "HonkaiImpact3", "BH3");
 
         private GameFormControl genshinOverseaFormControl =
@@ -51,6 +56,7 @@ namespace MiHoYoStarter
             genshinCloudFormControl.InitControl(this, tabPageGenshinCloud,
                 Properties.Settings.Default.GenshinCloudPath);
             starRailFormControl.InitControl(this, tabPageSatrRail, Properties.Settings.Default.StarRailPath);
+            zzzFormControl.InitControl(this, tabPageZZZ, Properties.Settings.Default.ZZZPath);
             starRailOverseaFormControl.InitControl(this, tabPageSatrRailOversea,
                 Properties.Settings.Default.StarRailOverseaPath);
             honkaiImpact3FormControl.InitControl(this, tabPageHonkaiImpact3,
@@ -61,12 +67,14 @@ namespace MiHoYoStarter
             DisplayGenshinOverseaTabToolStripMenuItem.Checked = Properties.Settings.Default.DisplayGenshinOverseaEnabled;
             DisplayGenshinCloudTabToolStripMenuItem.Checked = Properties.Settings.Default.DisplayGenshinCloudEnabled;
             DisplayStarRailTabToolStripMenuItem.Checked = Properties.Settings.Default.DisplayStarRailEnabled;
+            DisplayZZZTabToolStripMenuItem.Checked = Properties.Settings.Default.DisplayZZZEnabled;
             DisplayStarRailOverseaTabToolStripMenuItem.Checked = Properties.Settings.Default.DisplayStarRailOverseaEnabled;
             DisplayHonkaiImpact3TabToolStripMenuItem.Checked = Properties.Settings.Default.DisplayHonkaiImpact3Enabled;
 
             txtGenshinStartParam.Text = Properties.Settings.Default.GenshinStartParam;
             txtGenshinOverseaStartParam.Text = Properties.Settings.Default.GenshinStartParam;
             txtStarRailStartParam.Text = Properties.Settings.Default.StarRailStartParam;
+            txtZZZStartParam.Text = Properties.Settings.Default.ZZZStartParam;
             txtStarRailOverseaStartParam.Text = Properties.Settings.Default.StarRailStartParam;
             txtHonkaiImpact3StartParam.Text = Properties.Settings.Default.HonkaiImpact3StartParam;
 
@@ -74,6 +82,7 @@ namespace MiHoYoStarter
             chkGenshinOverseaAutoStart.Checked = Properties.Settings.Default.GenshinAutoStartEnabled;
             chkGenshinCloudAutoStart.Checked = Properties.Settings.Default.GenshinCloudAutoStartEnabled;
             chkStarRailAutoStart.Checked = Properties.Settings.Default.StarRailAutoStartEnabled;
+            chkZZZAutoStart.Checked = Properties.Settings.Default.ZZZAutoStartEnabled;
             chkStarRailOverseaAutoStart.Checked = Properties.Settings.Default.StarRailAutoStartEnabled;
             chkHonkaiImpact3AutoStart.Checked = Properties.Settings.Default.HonkaiImpact3AutoStartEnabled;
 
@@ -103,6 +112,12 @@ namespace MiHoYoStarter
             }
 
             if (DisplayStarRailTabToolStripMenuItem.Checked && starRailFormControl.AcctMenuItemList.Count > 0)
+            {
+                this.contextMenuStrip1.Items.AddRange(starRailFormControl.AcctMenuItemList.ToArray());
+                this.contextMenuStrip1.Items.Add(new ToolStripSeparator());
+                ;
+            }
+            if (DisplayZZZTabToolStripMenuItem.Checked && zzzFormControl.AcctMenuItemList.Count > 0)
             {
                 this.contextMenuStrip1.Items.AddRange(starRailFormControl.AcctMenuItemList.ToArray());
                 this.contextMenuStrip1.Items.Add(new ToolStripSeparator());
@@ -243,6 +258,13 @@ namespace MiHoYoStarter
             RefreshNotifyIconContextMenu();
         }
 
+        private void DisplayZZZTabToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DisplayZZZTabToolStripMenuItem.Checked = !DisplayZZZTabToolStripMenuItem.Checked;
+            RefreshTab();
+            RefreshNotifyIconContextMenu();
+        }
+
         private void DisplayHonkaiImpact3TabToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DisplayHonkaiImpact3TabToolStripMenuItem.Checked = !DisplayHonkaiImpact3TabToolStripMenuItem.Checked;
@@ -326,6 +348,21 @@ namespace MiHoYoStarter
                 }
             }
 
+            if (DisplayZZZTabToolStripMenuItem.Checked)
+            {
+                if (!tab1.TabPages.Contains(tabPageZZZ))
+                {
+                    tab1.TabPages.Add(tabPageZZZ);
+                }
+            }
+            else
+            {
+                if (tab1.TabPages.Contains(tabPageZZZ))
+                {
+                    tab1.TabPages.Remove(tabPageZZZ);
+                }
+            }
+
             if (DisplayStarRailOverseaTabToolStripMenuItem.Checked)
             {
                 if (!tab1.TabPages.Contains(tabPageSatrRailOversea))
@@ -384,6 +421,7 @@ namespace MiHoYoStarter
             Properties.Settings.Default.DisplayGenshinOverseaEnabled = DisplayGenshinOverseaTabToolStripMenuItem.Checked;
             Properties.Settings.Default.DisplayGenshinCloudEnabled = DisplayGenshinCloudTabToolStripMenuItem.Checked;
             Properties.Settings.Default.DisplayStarRailEnabled = DisplayStarRailTabToolStripMenuItem.Checked;
+            Properties.Settings.Default.DisplayZZZEnabled = DisplayZZZTabToolStripMenuItem.Checked;
             Properties.Settings.Default.DisplayStarRailOverseaEnabled = DisplayStarRailOverseaTabToolStripMenuItem.Checked;
             Properties.Settings.Default.DisplayHonkaiImpact3Enabled = DisplayHonkaiImpact3TabToolStripMenuItem.Checked;
 
@@ -391,12 +429,14 @@ namespace MiHoYoStarter
             Properties.Settings.Default.GenshinOverseaPath = txtGenshinOverseaPath.Text;
             Properties.Settings.Default.GenshinCloudPath = txtGenshinCloudPath.Text;
             Properties.Settings.Default.StarRailPath = txtStarRailPath.Text;
+            Properties.Settings.Default.ZZZPath = txtZZZPath.Text;
             Properties.Settings.Default.StarRailOverseaPath = txtStarRailOverseaPath.Text;
             Properties.Settings.Default.HonkaiImpact3Path = txtHonkaiImpact3Path.Text;
 
             Properties.Settings.Default.GenshinStartParam = txtGenshinStartParam.Text;
             Properties.Settings.Default.GenshinOverseaStartParam = txtGenshinOverseaStartParam.Text;
             Properties.Settings.Default.StarRailStartParam = txtStarRailStartParam.Text;
+            Properties.Settings.Default.ZZZStartParam = txtZZZStartParam.Text;
             Properties.Settings.Default.StarRailOverseaStartParam = txtStarRailOverseaStartParam.Text;
             Properties.Settings.Default.HonkaiImpact3StartParam = txtHonkaiImpact3StartParam.Text;
 
@@ -405,6 +445,7 @@ namespace MiHoYoStarter
             Properties.Settings.Default.GenshinOverseaAutoStartEnabled = chkGenshinOverseaAutoStart.Checked;
             Properties.Settings.Default.GenshinCloudAutoStartEnabled = chkGenshinCloudAutoStart.Checked;
             Properties.Settings.Default.StarRailAutoStartEnabled = chkStarRailAutoStart.Checked;
+            Properties.Settings.Default.ZZZAutoStartEnabled = chkZZZAutoStart.Checked;
             Properties.Settings.Default.StarRailOverseaAutoStartEnabled = chkStarRailOverseaAutoStart.Checked;
             Properties.Settings.Default.HonkaiImpact3AutoStartEnabled = chkHonkaiImpact3AutoStart.Checked;
 
@@ -414,6 +455,17 @@ namespace MiHoYoStarter
         public void UpdateBottomLabel(string info)
         {
             this.toolStripStatusLabel1.Text = info;
+        }
+
+        private void btnStarRailSwitch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label22_Click(object sender, EventArgs e)
+        {
+
+            Process.Start("https://github.com/qsuron0/mihoyo-starter");
         }
     }
 }

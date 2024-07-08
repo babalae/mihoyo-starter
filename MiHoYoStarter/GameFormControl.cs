@@ -94,6 +94,9 @@ namespace MiHoYoStarter
                         case "StarRail":
                             path = Path.Combine(installPath, "Game", "StarRail.exe");
                             break;
+                        case "ZZZ":
+                            path = Path.Combine(installPath, "Game", "ZenlessZoneZero.exe");
+                            break;
                         case "StarRailOversea":
                             path = Path.Combine(installPath, "Game", "StarRail.exe");
                             break;
@@ -157,6 +160,9 @@ namespace MiHoYoStarter
                 case "StarRail":
                     dialog.Filter = "崩坏：星穹铁道|StarRail.exe|可执行文件(*.exe)|*.exe";
                     break;
+                case "ZZZ":
+                    dialog.Filter = "绝区零|ZenlessZoneZero.exe|可执行文件(*.exe)|*.exe";
+                    break;
                 case "StarRailOversea":
                     dialog.Filter = "崩坏：星穹铁道（国际服）|StarRail.exe|可执行文件(*.exe)|*.exe";
                     break;
@@ -175,6 +181,7 @@ namespace MiHoYoStarter
 原神（国际服）：\Genshin Impact\Genshin Impact Game\GenshinImpact.exe
 云·原神：\Genshin Impact Cloud Game\Genshin Impact Cloud Game.exe
 崩坏：星穹铁道：\Star Rail\Game\StarRail.exe
+绝区零：\ZenlessZoneZero.exe
 崩坏3：\Honkai Impact 3rd\Game\BH3.exe";
                     MessageBox.Show(msg, "提示");
                     return;
