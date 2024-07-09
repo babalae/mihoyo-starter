@@ -147,6 +147,25 @@
             this.tipHelp = new System.Windows.Forms.ToolTip(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tabPageZZZ = new System.Windows.Forms.TabPage();
+            this.DisplayZZZTabToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.btnZZZStart = new System.Windows.Forms.Button();
+            this.chkZZZAutoStart = new System.Windows.Forms.CheckBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtZZZStartParam = new System.Windows.Forms.TextBox();
+            this.txtZZZPath = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.btnZZZChoosePath = new System.Windows.Forms.Button();
+            this.btnZZZDelete = new System.Windows.Forms.Button();
+            this.label21 = new System.Windows.Forms.Label();
+            this.btnZZZSwitch = new System.Windows.Forms.Button();
+            this.btnZZZAdd = new System.Windows.Forms.Button();
+            this.lvwZZZAcct = new System.Windows.Forms.ListView();
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             this.tab1.SuspendLayout();
             this.tabPageGenshin.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -174,21 +193,25 @@
             this.menuStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            this.tabPageZZZ.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // tab1
             // 
+            this.tab1.Controls.Add(this.tabPageZZZ);
             this.tab1.Controls.Add(this.tabPageGenshin);
-            this.tab1.Controls.Add(this.tabPageGenshinCloud);
             this.tab1.Controls.Add(this.tabPageSatrRail);
             this.tab1.Controls.Add(this.tabPageHonkaiImpact3);
+            this.tab1.Controls.Add(this.tabPageGenshinCloud);
             this.tab1.Controls.Add(this.tabPageGenshinOversea);
             this.tab1.Controls.Add(this.tabPageSatrRailOversea);
             this.tab1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tab1.Location = new System.Drawing.Point(0, 24);
             this.tab1.Name = "tab1";
             this.tab1.SelectedIndex = 0;
-            this.tab1.Size = new System.Drawing.Size(411, 480);
+            this.tab1.Size = new System.Drawing.Size(444, 725);
             this.tab1.TabIndex = 0;
             // 
             // tabPageGenshin
@@ -198,7 +221,7 @@
             this.tabPageGenshin.Location = new System.Drawing.Point(4, 22);
             this.tabPageGenshin.Name = "tabPageGenshin";
             this.tabPageGenshin.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageGenshin.Size = new System.Drawing.Size(581, 454);
+            this.tabPageGenshin.Size = new System.Drawing.Size(436, 699);
             this.tabPageGenshin.TabIndex = 0;
             this.tabPageGenshin.Text = "原神";
             // 
@@ -221,7 +244,7 @@
             this.groupBox1.Controls.Add(this.lvwGenshinAcct);
             this.groupBox1.Location = new System.Drawing.Point(8, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(563, 420);
+            this.groupBox1.Size = new System.Drawing.Size(420, 660);
             this.groupBox1.TabIndex = 39;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "账号切换";
@@ -231,7 +254,7 @@
             this.chkGenshinAutoStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkGenshinAutoStart.AutoSize = true;
             this.chkGenshinAutoStart.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.chkGenshinAutoStart.Location = new System.Drawing.Point(469, 332);
+            this.chkGenshinAutoStart.Location = new System.Drawing.Point(326, 332);
             this.chkGenshinAutoStart.Margin = new System.Windows.Forms.Padding(2);
             this.chkGenshinAutoStart.Name = "chkGenshinAutoStart";
             this.chkGenshinAutoStart.Size = new System.Drawing.Size(84, 16);
@@ -268,7 +291,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtGenshinStartParam.Location = new System.Drawing.Point(14, 84);
             this.txtGenshinStartParam.Name = "txtGenshinStartParam";
-            this.txtGenshinStartParam.Size = new System.Drawing.Size(543, 21);
+            this.txtGenshinStartParam.Size = new System.Drawing.Size(400, 21);
             this.txtGenshinStartParam.TabIndex = 36;
             // 
             // txtGenshinPath
@@ -277,7 +300,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtGenshinPath.Location = new System.Drawing.Point(14, 42);
             this.txtGenshinPath.Name = "txtGenshinPath";
-            this.txtGenshinPath.Size = new System.Drawing.Size(503, 21);
+            this.txtGenshinPath.Size = new System.Drawing.Size(360, 21);
             this.txtGenshinPath.TabIndex = 33;
             // 
             // lblPathTag
@@ -294,7 +317,7 @@
             // 
             this.btnGenshinChoosePath.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGenshinChoosePath.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnGenshinChoosePath.Location = new System.Drawing.Point(523, 40);
+            this.btnGenshinChoosePath.Location = new System.Drawing.Point(380, 40);
             this.btnGenshinChoosePath.Name = "btnGenshinChoosePath";
             this.btnGenshinChoosePath.Size = new System.Drawing.Size(34, 23);
             this.btnGenshinChoosePath.TabIndex = 34;
@@ -305,7 +328,7 @@
             // 
             this.btnGenshinDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGenshinDelete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnGenshinDelete.Location = new System.Drawing.Point(467, 383);
+            this.btnGenshinDelete.Location = new System.Drawing.Point(324, 383);
             this.btnGenshinDelete.Name = "btnGenshinDelete";
             this.btnGenshinDelete.Size = new System.Drawing.Size(90, 24);
             this.btnGenshinDelete.TabIndex = 28;
@@ -327,7 +350,7 @@
             // 
             this.btnGenshinSwitch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGenshinSwitch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnGenshinSwitch.Location = new System.Drawing.Point(467, 135);
+            this.btnGenshinSwitch.Location = new System.Drawing.Point(324, 135);
             this.btnGenshinSwitch.Name = "btnGenshinSwitch";
             this.btnGenshinSwitch.Size = new System.Drawing.Size(90, 41);
             this.btnGenshinSwitch.TabIndex = 26;
@@ -338,7 +361,7 @@
             // 
             this.btnGenshinAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGenshinAdd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnGenshinAdd.Location = new System.Drawing.Point(467, 353);
+            this.btnGenshinAdd.Location = new System.Drawing.Point(324, 353);
             this.btnGenshinAdd.Name = "btnGenshinAdd";
             this.btnGenshinAdd.Size = new System.Drawing.Size(90, 24);
             this.btnGenshinAdd.TabIndex = 25;
@@ -358,7 +381,7 @@
             this.lvwGenshinAcct.Margin = new System.Windows.Forms.Padding(2);
             this.lvwGenshinAcct.MultiSelect = false;
             this.lvwGenshinAcct.Name = "lvwGenshinAcct";
-            this.lvwGenshinAcct.Size = new System.Drawing.Size(448, 272);
+            this.lvwGenshinAcct.Size = new System.Drawing.Size(305, 512);
             this.lvwGenshinAcct.TabIndex = 24;
             this.lvwGenshinAcct.UseCompatibleStateImageBehavior = false;
             this.lvwGenshinAcct.View = System.Windows.Forms.View.List;
@@ -375,7 +398,7 @@
             this.tabPageGenshinCloud.Location = new System.Drawing.Point(4, 22);
             this.tabPageGenshinCloud.Name = "tabPageGenshinCloud";
             this.tabPageGenshinCloud.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageGenshinCloud.Size = new System.Drawing.Size(581, 454);
+            this.tabPageGenshinCloud.Size = new System.Drawing.Size(436, 699);
             this.tabPageGenshinCloud.TabIndex = 1;
             this.tabPageGenshinCloud.Text = "云·原神";
             // 
@@ -395,7 +418,7 @@
             this.groupBox6.Controls.Add(this.lvwGenshinCloudAcct);
             this.groupBox6.Location = new System.Drawing.Point(8, 6);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(563, 420);
+            this.groupBox6.Size = new System.Drawing.Size(422, 659);
             this.groupBox6.TabIndex = 43;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "账号切换";
@@ -405,7 +428,7 @@
             this.chkGenshinCloudAutoStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkGenshinCloudAutoStart.AutoSize = true;
             this.chkGenshinCloudAutoStart.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.chkGenshinCloudAutoStart.Location = new System.Drawing.Point(469, 332);
+            this.chkGenshinCloudAutoStart.Location = new System.Drawing.Point(328, 332);
             this.chkGenshinCloudAutoStart.Margin = new System.Windows.Forms.Padding(2);
             this.chkGenshinCloudAutoStart.Name = "chkGenshinCloudAutoStart";
             this.chkGenshinCloudAutoStart.Size = new System.Drawing.Size(84, 16);
@@ -419,7 +442,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtGenshinCloudPath.Location = new System.Drawing.Point(14, 42);
             this.txtGenshinCloudPath.Name = "txtGenshinCloudPath";
-            this.txtGenshinCloudPath.Size = new System.Drawing.Size(503, 21);
+            this.txtGenshinCloudPath.Size = new System.Drawing.Size(362, 21);
             this.txtGenshinCloudPath.TabIndex = 33;
             // 
             // label5
@@ -436,7 +459,7 @@
             // 
             this.btnGenshinCloudChoosePath.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGenshinCloudChoosePath.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnGenshinCloudChoosePath.Location = new System.Drawing.Point(523, 40);
+            this.btnGenshinCloudChoosePath.Location = new System.Drawing.Point(382, 40);
             this.btnGenshinCloudChoosePath.Name = "btnGenshinCloudChoosePath";
             this.btnGenshinCloudChoosePath.Size = new System.Drawing.Size(34, 23);
             this.btnGenshinCloudChoosePath.TabIndex = 34;
@@ -447,7 +470,7 @@
             // 
             this.btnGenshinCloudDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGenshinCloudDelete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnGenshinCloudDelete.Location = new System.Drawing.Point(467, 383);
+            this.btnGenshinCloudDelete.Location = new System.Drawing.Point(326, 383);
             this.btnGenshinCloudDelete.Name = "btnGenshinCloudDelete";
             this.btnGenshinCloudDelete.Size = new System.Drawing.Size(90, 24);
             this.btnGenshinCloudDelete.TabIndex = 28;
@@ -469,7 +492,7 @@
             // 
             this.btnGenshinCloudSwitch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGenshinCloudSwitch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnGenshinCloudSwitch.Location = new System.Drawing.Point(467, 80);
+            this.btnGenshinCloudSwitch.Location = new System.Drawing.Point(326, 80);
             this.btnGenshinCloudSwitch.Name = "btnGenshinCloudSwitch";
             this.btnGenshinCloudSwitch.Size = new System.Drawing.Size(90, 41);
             this.btnGenshinCloudSwitch.TabIndex = 26;
@@ -480,7 +503,7 @@
             // 
             this.btnGenshinCloudAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGenshinCloudAdd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnGenshinCloudAdd.Location = new System.Drawing.Point(467, 353);
+            this.btnGenshinCloudAdd.Location = new System.Drawing.Point(326, 353);
             this.btnGenshinCloudAdd.Name = "btnGenshinCloudAdd";
             this.btnGenshinCloudAdd.Size = new System.Drawing.Size(90, 24);
             this.btnGenshinCloudAdd.TabIndex = 25;
@@ -500,7 +523,7 @@
             this.lvwGenshinCloudAcct.Margin = new System.Windows.Forms.Padding(2);
             this.lvwGenshinCloudAcct.MultiSelect = false;
             this.lvwGenshinCloudAcct.Name = "lvwGenshinCloudAcct";
-            this.lvwGenshinCloudAcct.Size = new System.Drawing.Size(448, 327);
+            this.lvwGenshinCloudAcct.Size = new System.Drawing.Size(307, 566);
             this.lvwGenshinCloudAcct.TabIndex = 24;
             this.lvwGenshinCloudAcct.UseCompatibleStateImageBehavior = false;
             this.lvwGenshinCloudAcct.View = System.Windows.Forms.View.List;
@@ -518,7 +541,7 @@
             this.tabPageSatrRail.Location = new System.Drawing.Point(4, 22);
             this.tabPageSatrRail.Name = "tabPageSatrRail";
             this.tabPageSatrRail.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageSatrRail.Size = new System.Drawing.Size(581, 454);
+            this.tabPageSatrRail.Size = new System.Drawing.Size(436, 699);
             this.tabPageSatrRail.TabIndex = 2;
             this.tabPageSatrRail.Text = "崩坏：星穹铁道";
             // 
@@ -530,9 +553,9 @@
             this.groupBox3.Controls.Add(this.btnStarRailFPSEdit);
             this.groupBox3.Controls.Add(this.numericUpDownFPS);
             this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Location = new System.Drawing.Point(8, 340);
+            this.groupBox3.Location = new System.Drawing.Point(8, 585);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(562, 84);
+            this.groupBox3.Size = new System.Drawing.Size(595, 84);
             this.groupBox3.TabIndex = 42;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "游戏设置";
@@ -611,7 +634,7 @@
             this.groupBox4.Controls.Add(this.lvwStarRailAcct);
             this.groupBox4.Location = new System.Drawing.Point(8, 6);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(563, 316);
+            this.groupBox4.Size = new System.Drawing.Size(420, 561);
             this.groupBox4.TabIndex = 41;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "账号切换";
@@ -619,7 +642,7 @@
             // btnStarRailStart
             // 
             this.btnStarRailStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnStarRailStart.Location = new System.Drawing.Point(469, 182);
+            this.btnStarRailStart.Location = new System.Drawing.Point(326, 182);
             this.btnStarRailStart.Name = "btnStarRailStart";
             this.btnStarRailStart.Size = new System.Drawing.Size(88, 23);
             this.btnStarRailStart.TabIndex = 42;
@@ -631,7 +654,7 @@
             this.chkStarRailAutoStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkStarRailAutoStart.AutoSize = true;
             this.chkStarRailAutoStart.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.chkStarRailAutoStart.Location = new System.Drawing.Point(469, 230);
+            this.chkStarRailAutoStart.Location = new System.Drawing.Point(326, 230);
             this.chkStarRailAutoStart.Margin = new System.Windows.Forms.Padding(2);
             this.chkStarRailAutoStart.Name = "chkStarRailAutoStart";
             this.chkStarRailAutoStart.Size = new System.Drawing.Size(84, 16);
@@ -668,7 +691,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtStarRailStartParam.Location = new System.Drawing.Point(14, 84);
             this.txtStarRailStartParam.Name = "txtStarRailStartParam";
-            this.txtStarRailStartParam.Size = new System.Drawing.Size(543, 21);
+            this.txtStarRailStartParam.Size = new System.Drawing.Size(400, 21);
             this.txtStarRailStartParam.TabIndex = 36;
             // 
             // txtStarRailPath
@@ -677,7 +700,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtStarRailPath.Location = new System.Drawing.Point(14, 42);
             this.txtStarRailPath.Name = "txtStarRailPath";
-            this.txtStarRailPath.Size = new System.Drawing.Size(503, 21);
+            this.txtStarRailPath.Size = new System.Drawing.Size(360, 21);
             this.txtStarRailPath.TabIndex = 33;
             // 
             // label8
@@ -694,7 +717,7 @@
             // 
             this.btnStarRailChoosePath.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnStarRailChoosePath.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnStarRailChoosePath.Location = new System.Drawing.Point(523, 40);
+            this.btnStarRailChoosePath.Location = new System.Drawing.Point(380, 40);
             this.btnStarRailChoosePath.Name = "btnStarRailChoosePath";
             this.btnStarRailChoosePath.Size = new System.Drawing.Size(34, 23);
             this.btnStarRailChoosePath.TabIndex = 34;
@@ -705,7 +728,7 @@
             // 
             this.btnStarRailDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnStarRailDelete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnStarRailDelete.Location = new System.Drawing.Point(467, 281);
+            this.btnStarRailDelete.Location = new System.Drawing.Point(324, 281);
             this.btnStarRailDelete.Name = "btnStarRailDelete";
             this.btnStarRailDelete.Size = new System.Drawing.Size(90, 24);
             this.btnStarRailDelete.TabIndex = 28;
@@ -727,18 +750,19 @@
             // 
             this.btnStarRailSwitch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnStarRailSwitch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnStarRailSwitch.Location = new System.Drawing.Point(468, 135);
+            this.btnStarRailSwitch.Location = new System.Drawing.Point(325, 135);
             this.btnStarRailSwitch.Name = "btnStarRailSwitch";
             this.btnStarRailSwitch.Size = new System.Drawing.Size(90, 41);
             this.btnStarRailSwitch.TabIndex = 26;
             this.btnStarRailSwitch.Text = "切换选中账号";
             this.btnStarRailSwitch.UseVisualStyleBackColor = true;
+            this.btnStarRailSwitch.Click += new System.EventHandler(this.btnStarRailSwitch_Click);
             // 
             // btnStarRailAdd
             // 
             this.btnStarRailAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnStarRailAdd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnStarRailAdd.Location = new System.Drawing.Point(467, 251);
+            this.btnStarRailAdd.Location = new System.Drawing.Point(324, 251);
             this.btnStarRailAdd.Name = "btnStarRailAdd";
             this.btnStarRailAdd.Size = new System.Drawing.Size(90, 24);
             this.btnStarRailAdd.TabIndex = 25;
@@ -758,7 +782,7 @@
             this.lvwStarRailAcct.Margin = new System.Windows.Forms.Padding(2);
             this.lvwStarRailAcct.MultiSelect = false;
             this.lvwStarRailAcct.Name = "lvwStarRailAcct";
-            this.lvwStarRailAcct.Size = new System.Drawing.Size(448, 168);
+            this.lvwStarRailAcct.Size = new System.Drawing.Size(305, 413);
             this.lvwStarRailAcct.TabIndex = 24;
             this.lvwStarRailAcct.UseCompatibleStateImageBehavior = false;
             this.lvwStarRailAcct.View = System.Windows.Forms.View.List;
@@ -775,7 +799,7 @@
             this.tabPageHonkaiImpact3.Location = new System.Drawing.Point(4, 22);
             this.tabPageHonkaiImpact3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageHonkaiImpact3.Name = "tabPageHonkaiImpact3";
-            this.tabPageHonkaiImpact3.Size = new System.Drawing.Size(581, 454);
+            this.tabPageHonkaiImpact3.Size = new System.Drawing.Size(436, 699);
             this.tabPageHonkaiImpact3.TabIndex = 3;
             this.tabPageHonkaiImpact3.Text = "崩坏3";
             // 
@@ -798,7 +822,7 @@
             this.groupBox2.Controls.Add(this.lvwHonkaiImpact3Acct);
             this.groupBox2.Location = new System.Drawing.Point(8, 6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(563, 423);
+            this.groupBox2.Size = new System.Drawing.Size(420, 661);
             this.groupBox2.TabIndex = 40;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "账号切换";
@@ -808,7 +832,7 @@
             this.chkHonkaiImpact3AutoStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkHonkaiImpact3AutoStart.AutoSize = true;
             this.chkHonkaiImpact3AutoStart.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.chkHonkaiImpact3AutoStart.Location = new System.Drawing.Point(469, 332);
+            this.chkHonkaiImpact3AutoStart.Location = new System.Drawing.Point(326, 332);
             this.chkHonkaiImpact3AutoStart.Margin = new System.Windows.Forms.Padding(2);
             this.chkHonkaiImpact3AutoStart.Name = "chkHonkaiImpact3AutoStart";
             this.chkHonkaiImpact3AutoStart.Size = new System.Drawing.Size(84, 16);
@@ -845,7 +869,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtHonkaiImpact3StartParam.Location = new System.Drawing.Point(14, 84);
             this.txtHonkaiImpact3StartParam.Name = "txtHonkaiImpact3StartParam";
-            this.txtHonkaiImpact3StartParam.Size = new System.Drawing.Size(543, 21);
+            this.txtHonkaiImpact3StartParam.Size = new System.Drawing.Size(400, 21);
             this.txtHonkaiImpact3StartParam.TabIndex = 36;
             // 
             // txtHonkaiImpact3Path
@@ -854,7 +878,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtHonkaiImpact3Path.Location = new System.Drawing.Point(14, 42);
             this.txtHonkaiImpact3Path.Name = "txtHonkaiImpact3Path";
-            this.txtHonkaiImpact3Path.Size = new System.Drawing.Size(503, 21);
+            this.txtHonkaiImpact3Path.Size = new System.Drawing.Size(360, 21);
             this.txtHonkaiImpact3Path.TabIndex = 33;
             // 
             // label4
@@ -871,7 +895,7 @@
             // 
             this.btnHonkaiImpact3ChoosePath.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHonkaiImpact3ChoosePath.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnHonkaiImpact3ChoosePath.Location = new System.Drawing.Point(523, 40);
+            this.btnHonkaiImpact3ChoosePath.Location = new System.Drawing.Point(380, 40);
             this.btnHonkaiImpact3ChoosePath.Name = "btnHonkaiImpact3ChoosePath";
             this.btnHonkaiImpact3ChoosePath.Size = new System.Drawing.Size(34, 23);
             this.btnHonkaiImpact3ChoosePath.TabIndex = 34;
@@ -882,7 +906,7 @@
             // 
             this.btnHonkaiImpact3Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHonkaiImpact3Delete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnHonkaiImpact3Delete.Location = new System.Drawing.Point(467, 383);
+            this.btnHonkaiImpact3Delete.Location = new System.Drawing.Point(324, 383);
             this.btnHonkaiImpact3Delete.Name = "btnHonkaiImpact3Delete";
             this.btnHonkaiImpact3Delete.Size = new System.Drawing.Size(90, 24);
             this.btnHonkaiImpact3Delete.TabIndex = 28;
@@ -904,7 +928,7 @@
             // 
             this.btnHonkaiImpact3Switch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHonkaiImpact3Switch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnHonkaiImpact3Switch.Location = new System.Drawing.Point(468, 135);
+            this.btnHonkaiImpact3Switch.Location = new System.Drawing.Point(325, 135);
             this.btnHonkaiImpact3Switch.Name = "btnHonkaiImpact3Switch";
             this.btnHonkaiImpact3Switch.Size = new System.Drawing.Size(90, 41);
             this.btnHonkaiImpact3Switch.TabIndex = 26;
@@ -915,7 +939,7 @@
             // 
             this.btnHonkaiImpact3Add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHonkaiImpact3Add.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnHonkaiImpact3Add.Location = new System.Drawing.Point(467, 353);
+            this.btnHonkaiImpact3Add.Location = new System.Drawing.Point(324, 353);
             this.btnHonkaiImpact3Add.Name = "btnHonkaiImpact3Add";
             this.btnHonkaiImpact3Add.Size = new System.Drawing.Size(90, 24);
             this.btnHonkaiImpact3Add.TabIndex = 25;
@@ -935,7 +959,7 @@
             this.lvwHonkaiImpact3Acct.Margin = new System.Windows.Forms.Padding(2);
             this.lvwHonkaiImpact3Acct.MultiSelect = false;
             this.lvwHonkaiImpact3Acct.Name = "lvwHonkaiImpact3Acct";
-            this.lvwHonkaiImpact3Acct.Size = new System.Drawing.Size(448, 275);
+            this.lvwHonkaiImpact3Acct.Size = new System.Drawing.Size(305, 513);
             this.lvwHonkaiImpact3Acct.TabIndex = 24;
             this.lvwHonkaiImpact3Acct.UseCompatibleStateImageBehavior = false;
             this.lvwHonkaiImpact3Acct.View = System.Windows.Forms.View.List;
@@ -951,7 +975,7 @@
             this.tabPageGenshinOversea.Location = new System.Drawing.Point(4, 22);
             this.tabPageGenshinOversea.Name = "tabPageGenshinOversea";
             this.tabPageGenshinOversea.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageGenshinOversea.Size = new System.Drawing.Size(581, 454);
+            this.tabPageGenshinOversea.Size = new System.Drawing.Size(436, 699);
             this.tabPageGenshinOversea.TabIndex = 4;
             this.tabPageGenshinOversea.Text = "原神（国际服）";
             this.tabPageGenshinOversea.UseVisualStyleBackColor = true;
@@ -975,7 +999,7 @@
             this.groupBox5.Controls.Add(this.lvwGenshinOverseaAcct);
             this.groupBox5.Location = new System.Drawing.Point(8, 6);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(563, 420);
+            this.groupBox5.Size = new System.Drawing.Size(422, 663);
             this.groupBox5.TabIndex = 40;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "账号切换";
@@ -985,7 +1009,7 @@
             this.chkGenshinOverseaAutoStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkGenshinOverseaAutoStart.AutoSize = true;
             this.chkGenshinOverseaAutoStart.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.chkGenshinOverseaAutoStart.Location = new System.Drawing.Point(469, 332);
+            this.chkGenshinOverseaAutoStart.Location = new System.Drawing.Point(328, 332);
             this.chkGenshinOverseaAutoStart.Margin = new System.Windows.Forms.Padding(2);
             this.chkGenshinOverseaAutoStart.Name = "chkGenshinOverseaAutoStart";
             this.chkGenshinOverseaAutoStart.Size = new System.Drawing.Size(84, 16);
@@ -1022,7 +1046,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtGenshinOverseaStartParam.Location = new System.Drawing.Point(14, 84);
             this.txtGenshinOverseaStartParam.Name = "txtGenshinOverseaStartParam";
-            this.txtGenshinOverseaStartParam.Size = new System.Drawing.Size(543, 21);
+            this.txtGenshinOverseaStartParam.Size = new System.Drawing.Size(402, 21);
             this.txtGenshinOverseaStartParam.TabIndex = 36;
             // 
             // txtGenshinOverseaPath
@@ -1031,7 +1055,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtGenshinOverseaPath.Location = new System.Drawing.Point(14, 42);
             this.txtGenshinOverseaPath.Name = "txtGenshinOverseaPath";
-            this.txtGenshinOverseaPath.Size = new System.Drawing.Size(503, 21);
+            this.txtGenshinOverseaPath.Size = new System.Drawing.Size(362, 21);
             this.txtGenshinOverseaPath.TabIndex = 33;
             // 
             // label13
@@ -1048,7 +1072,7 @@
             // 
             this.btnGenshinOverseaChoosePath.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGenshinOverseaChoosePath.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnGenshinOverseaChoosePath.Location = new System.Drawing.Point(523, 40);
+            this.btnGenshinOverseaChoosePath.Location = new System.Drawing.Point(382, 40);
             this.btnGenshinOverseaChoosePath.Name = "btnGenshinOverseaChoosePath";
             this.btnGenshinOverseaChoosePath.Size = new System.Drawing.Size(34, 23);
             this.btnGenshinOverseaChoosePath.TabIndex = 34;
@@ -1059,7 +1083,7 @@
             // 
             this.btnGenshinOverseaDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGenshinOverseaDelete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnGenshinOverseaDelete.Location = new System.Drawing.Point(467, 383);
+            this.btnGenshinOverseaDelete.Location = new System.Drawing.Point(326, 383);
             this.btnGenshinOverseaDelete.Name = "btnGenshinOverseaDelete";
             this.btnGenshinOverseaDelete.Size = new System.Drawing.Size(90, 24);
             this.btnGenshinOverseaDelete.TabIndex = 28;
@@ -1081,7 +1105,7 @@
             // 
             this.btnGenshinOverseaSwitch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGenshinOverseaSwitch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnGenshinOverseaSwitch.Location = new System.Drawing.Point(467, 135);
+            this.btnGenshinOverseaSwitch.Location = new System.Drawing.Point(326, 135);
             this.btnGenshinOverseaSwitch.Name = "btnGenshinOverseaSwitch";
             this.btnGenshinOverseaSwitch.Size = new System.Drawing.Size(90, 41);
             this.btnGenshinOverseaSwitch.TabIndex = 26;
@@ -1092,7 +1116,7 @@
             // 
             this.btnGenshinOverseaAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGenshinOverseaAdd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnGenshinOverseaAdd.Location = new System.Drawing.Point(467, 353);
+            this.btnGenshinOverseaAdd.Location = new System.Drawing.Point(326, 353);
             this.btnGenshinOverseaAdd.Name = "btnGenshinOverseaAdd";
             this.btnGenshinOverseaAdd.Size = new System.Drawing.Size(90, 24);
             this.btnGenshinOverseaAdd.TabIndex = 25;
@@ -1112,7 +1136,7 @@
             this.lvwGenshinOverseaAcct.Margin = new System.Windows.Forms.Padding(2);
             this.lvwGenshinOverseaAcct.MultiSelect = false;
             this.lvwGenshinOverseaAcct.Name = "lvwGenshinOverseaAcct";
-            this.lvwGenshinOverseaAcct.Size = new System.Drawing.Size(448, 272);
+            this.lvwGenshinOverseaAcct.Size = new System.Drawing.Size(307, 515);
             this.lvwGenshinOverseaAcct.TabIndex = 24;
             this.lvwGenshinOverseaAcct.UseCompatibleStateImageBehavior = false;
             this.lvwGenshinOverseaAcct.View = System.Windows.Forms.View.List;
@@ -1129,7 +1153,7 @@
             this.tabPageSatrRailOversea.Location = new System.Drawing.Point(4, 22);
             this.tabPageSatrRailOversea.Name = "tabPageSatrRailOversea";
             this.tabPageSatrRailOversea.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageSatrRailOversea.Size = new System.Drawing.Size(403, 454);
+            this.tabPageSatrRailOversea.Size = new System.Drawing.Size(436, 699);
             this.tabPageSatrRailOversea.TabIndex = 5;
             this.tabPageSatrRailOversea.Text = "崩坏：星穹铁道（国际服）";
             this.tabPageSatrRailOversea.UseVisualStyleBackColor = true;
@@ -1142,9 +1166,9 @@
             this.groupBox8.Controls.Add(this.btnStarRailOverseaFPSEdit);
             this.groupBox8.Controls.Add(this.numericUpDownFPSOversea);
             this.groupBox8.Controls.Add(this.label18);
-            this.groupBox8.Location = new System.Drawing.Point(8, 340);
+            this.groupBox8.Location = new System.Drawing.Point(8, 585);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(384, 84);
+            this.groupBox8.Size = new System.Drawing.Size(417, 84);
             this.groupBox8.TabIndex = 43;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "国际服游戏设置";
@@ -1223,7 +1247,7 @@
             this.groupBox7.Controls.Add(this.lvwStarRailOverseaAcct);
             this.groupBox7.Location = new System.Drawing.Point(8, 6);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(385, 316);
+            this.groupBox7.Size = new System.Drawing.Size(418, 561);
             this.groupBox7.TabIndex = 42;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "账号切换";
@@ -1231,7 +1255,7 @@
             // btnStarRailOverseaStart
             // 
             this.btnStarRailOverseaStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnStarRailOverseaStart.Location = new System.Drawing.Point(291, 182);
+            this.btnStarRailOverseaStart.Location = new System.Drawing.Point(324, 182);
             this.btnStarRailOverseaStart.Name = "btnStarRailOverseaStart";
             this.btnStarRailOverseaStart.Size = new System.Drawing.Size(88, 23);
             this.btnStarRailOverseaStart.TabIndex = 42;
@@ -1243,7 +1267,7 @@
             this.chkStarRailOverseaAutoStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkStarRailOverseaAutoStart.AutoSize = true;
             this.chkStarRailOverseaAutoStart.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.chkStarRailOverseaAutoStart.Location = new System.Drawing.Point(291, 230);
+            this.chkStarRailOverseaAutoStart.Location = new System.Drawing.Point(324, 230);
             this.chkStarRailOverseaAutoStart.Margin = new System.Windows.Forms.Padding(2);
             this.chkStarRailOverseaAutoStart.Name = "chkStarRailOverseaAutoStart";
             this.chkStarRailOverseaAutoStart.Size = new System.Drawing.Size(84, 16);
@@ -1280,7 +1304,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtStarRailOverseaStartParam.Location = new System.Drawing.Point(14, 84);
             this.txtStarRailOverseaStartParam.Name = "txtStarRailOverseaStartParam";
-            this.txtStarRailOverseaStartParam.Size = new System.Drawing.Size(365, 21);
+            this.txtStarRailOverseaStartParam.Size = new System.Drawing.Size(398, 21);
             this.txtStarRailOverseaStartParam.TabIndex = 36;
             // 
             // txtStarRailOverseaPath
@@ -1289,7 +1313,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtStarRailOverseaPath.Location = new System.Drawing.Point(14, 42);
             this.txtStarRailOverseaPath.Name = "txtStarRailOverseaPath";
-            this.txtStarRailOverseaPath.Size = new System.Drawing.Size(325, 21);
+            this.txtStarRailOverseaPath.Size = new System.Drawing.Size(358, 21);
             this.txtStarRailOverseaPath.TabIndex = 33;
             // 
             // label16
@@ -1306,7 +1330,7 @@
             // 
             this.btnStarRailOverseaChoosePath.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnStarRailOverseaChoosePath.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnStarRailOverseaChoosePath.Location = new System.Drawing.Point(345, 40);
+            this.btnStarRailOverseaChoosePath.Location = new System.Drawing.Point(378, 40);
             this.btnStarRailOverseaChoosePath.Name = "btnStarRailOverseaChoosePath";
             this.btnStarRailOverseaChoosePath.Size = new System.Drawing.Size(34, 23);
             this.btnStarRailOverseaChoosePath.TabIndex = 34;
@@ -1317,7 +1341,7 @@
             // 
             this.btnStarRailOverseaDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnStarRailOverseaDelete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnStarRailOverseaDelete.Location = new System.Drawing.Point(289, 281);
+            this.btnStarRailOverseaDelete.Location = new System.Drawing.Point(322, 281);
             this.btnStarRailOverseaDelete.Name = "btnStarRailOverseaDelete";
             this.btnStarRailOverseaDelete.Size = new System.Drawing.Size(90, 24);
             this.btnStarRailOverseaDelete.TabIndex = 28;
@@ -1339,7 +1363,7 @@
             // 
             this.btnStarRailOverseaSwitch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnStarRailOverseaSwitch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnStarRailOverseaSwitch.Location = new System.Drawing.Point(290, 135);
+            this.btnStarRailOverseaSwitch.Location = new System.Drawing.Point(323, 135);
             this.btnStarRailOverseaSwitch.Name = "btnStarRailOverseaSwitch";
             this.btnStarRailOverseaSwitch.Size = new System.Drawing.Size(90, 41);
             this.btnStarRailOverseaSwitch.TabIndex = 26;
@@ -1350,7 +1374,7 @@
             // 
             this.btnStarRailOverseaAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnStarRailOverseaAdd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnStarRailOverseaAdd.Location = new System.Drawing.Point(289, 251);
+            this.btnStarRailOverseaAdd.Location = new System.Drawing.Point(322, 251);
             this.btnStarRailOverseaAdd.Name = "btnStarRailOverseaAdd";
             this.btnStarRailOverseaAdd.Size = new System.Drawing.Size(90, 24);
             this.btnStarRailOverseaAdd.TabIndex = 25;
@@ -1370,7 +1394,7 @@
             this.lvwStarRailOverseaAcct.Margin = new System.Windows.Forms.Padding(2);
             this.lvwStarRailOverseaAcct.MultiSelect = false;
             this.lvwStarRailOverseaAcct.Name = "lvwStarRailOverseaAcct";
-            this.lvwStarRailOverseaAcct.Size = new System.Drawing.Size(270, 168);
+            this.lvwStarRailOverseaAcct.Size = new System.Drawing.Size(303, 413);
             this.lvwStarRailOverseaAcct.TabIndex = 24;
             this.lvwStarRailOverseaAcct.UseCompatibleStateImageBehavior = false;
             this.lvwStarRailOverseaAcct.View = System.Windows.Forms.View.List;
@@ -1389,7 +1413,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(411, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(444, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -1401,7 +1425,8 @@
             this.DisplayStarRailTabToolStripMenuItem,
             this.DisplayHonkaiImpact3TabToolStripMenuItem,
             this.DisplayGenshinOverseaTabToolStripMenuItem,
-            this.DisplayStarRailOverseaTabToolStripMenuItem});
+            this.DisplayStarRailOverseaTabToolStripMenuItem,
+            this.DisplayZZZTabToolStripMenuItem});
             this.设置ToolStripMenuItem.Name = "设置ToolStripMenuItem";
             this.设置ToolStripMenuItem.Size = new System.Drawing.Size(68, 22);
             this.设置ToolStripMenuItem.Text = "界面显示";
@@ -1472,14 +1497,14 @@
             // 主页ToolStripMenuItem
             // 
             this.主页ToolStripMenuItem.Name = "主页ToolStripMenuItem";
-            this.主页ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.主页ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.主页ToolStripMenuItem.Text = "主页";
             this.主页ToolStripMenuItem.Click += new System.EventHandler(this.主页ToolStripMenuItem_Click);
             // 
             // 请作者喝咖啡ToolStripMenuItem
             // 
             this.请作者喝咖啡ToolStripMenuItem.Name = "请作者喝咖啡ToolStripMenuItem";
-            this.请作者喝咖啡ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.请作者喝咖啡ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.请作者喝咖啡ToolStripMenuItem.Text = "请作者喝咖啡";
             this.请作者喝咖啡ToolStripMenuItem.Click += new System.EventHandler(this.请作者喝咖啡ToolStripMenuItem_Click);
             // 
@@ -1519,9 +1544,9 @@
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 482);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 727);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(411, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(444, 22);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -1530,11 +1555,228 @@
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
             // 
+            // tabPageZZZ
+            // 
+            this.tabPageZZZ.Controls.Add(this.label23);
+            this.tabPageZZZ.Controls.Add(this.label22);
+            this.tabPageZZZ.Controls.Add(this.groupBox9);
+            this.tabPageZZZ.Location = new System.Drawing.Point(4, 22);
+            this.tabPageZZZ.Name = "tabPageZZZ";
+            this.tabPageZZZ.Size = new System.Drawing.Size(436, 699);
+            this.tabPageZZZ.TabIndex = 6;
+            this.tabPageZZZ.Text = "绝区零";
+            this.tabPageZZZ.UseVisualStyleBackColor = true;
+            // 
+            // DisplayZZZTabToolStripMenuItem
+            // 
+            this.DisplayZZZTabToolStripMenuItem.Checked = true;
+            this.DisplayZZZTabToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.DisplayZZZTabToolStripMenuItem.Name = "DisplayZZZTabToolStripMenuItem";
+            this.DisplayZZZTabToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
+            this.DisplayZZZTabToolStripMenuItem.Text = "绝区零";
+            this.DisplayZZZTabToolStripMenuItem.Click += new System.EventHandler(this.DisplayZZZTabToolStripMenuItem_Click);
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox9.Controls.Add(this.btnZZZStart);
+            this.groupBox9.Controls.Add(this.chkZZZAutoStart);
+            this.groupBox9.Controls.Add(this.pictureBox7);
+            this.groupBox9.Controls.Add(this.label19);
+            this.groupBox9.Controls.Add(this.txtZZZStartParam);
+            this.groupBox9.Controls.Add(this.txtZZZPath);
+            this.groupBox9.Controls.Add(this.label20);
+            this.groupBox9.Controls.Add(this.btnZZZChoosePath);
+            this.groupBox9.Controls.Add(this.btnZZZDelete);
+            this.groupBox9.Controls.Add(this.label21);
+            this.groupBox9.Controls.Add(this.btnZZZSwitch);
+            this.groupBox9.Controls.Add(this.btnZZZAdd);
+            this.groupBox9.Controls.Add(this.lvwZZZAcct);
+            this.groupBox9.Location = new System.Drawing.Point(8, 16);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(410, 617);
+            this.groupBox9.TabIndex = 42;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "账号切换";
+            // 
+            // btnZZZStart
+            // 
+            this.btnZZZStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnZZZStart.Location = new System.Drawing.Point(316, 182);
+            this.btnZZZStart.Name = "btnZZZStart";
+            this.btnZZZStart.Size = new System.Drawing.Size(88, 23);
+            this.btnZZZStart.TabIndex = 42;
+            this.btnZZZStart.Text = "启动游戏";
+            this.btnZZZStart.UseVisualStyleBackColor = true;
+            // 
+            // chkZZZAutoStart
+            // 
+            this.chkZZZAutoStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.chkZZZAutoStart.AutoSize = true;
+            this.chkZZZAutoStart.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.chkZZZAutoStart.Location = new System.Drawing.Point(316, 230);
+            this.chkZZZAutoStart.Margin = new System.Windows.Forms.Padding(2);
+            this.chkZZZAutoStart.Name = "chkZZZAutoStart";
+            this.chkZZZAutoStart.Size = new System.Drawing.Size(84, 16);
+            this.chkZZZAutoStart.TabIndex = 41;
+            this.chkZZZAutoStart.Text = "切换时重启";
+            this.chkZZZAutoStart.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::MiHoYoStarter.Properties.Resources.attention;
+            this.pictureBox7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox7.Location = new System.Drawing.Point(76, 67);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox7.TabIndex = 38;
+            this.pictureBox7.TabStop = false;
+            this.tipHelp.SetToolTip(this.pictureBox7, "如果你不知道什么是启动参数请不要填写。\r\n常见启动参数：\r\n无边框 -popupwindow\r\n指定分辨率 -screen-width 1600 -screen-" +
+        "height 900\r\n");
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label19.Location = new System.Drawing.Point(15, 69);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(65, 12);
+            this.label19.TabIndex = 37;
+            this.label19.Text = "启动参数：";
+            // 
+            // txtZZZStartParam
+            // 
+            this.txtZZZStartParam.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtZZZStartParam.Location = new System.Drawing.Point(14, 84);
+            this.txtZZZStartParam.Name = "txtZZZStartParam";
+            this.txtZZZStartParam.Size = new System.Drawing.Size(390, 21);
+            this.txtZZZStartParam.TabIndex = 36;
+            // 
+            // txtZZZPath
+            // 
+            this.txtZZZPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtZZZPath.Location = new System.Drawing.Point(14, 42);
+            this.txtZZZPath.Name = "txtZZZPath";
+            this.txtZZZPath.Size = new System.Drawing.Size(350, 21);
+            this.txtZZZPath.TabIndex = 33;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label20.Location = new System.Drawing.Point(15, 27);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(149, 12);
+            this.label20.TabIndex = 32;
+            this.label20.Text = "【绝区零】游戏程序路径：";
+            // 
+            // btnZZZChoosePath
+            // 
+            this.btnZZZChoosePath.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnZZZChoosePath.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnZZZChoosePath.Location = new System.Drawing.Point(370, 40);
+            this.btnZZZChoosePath.Name = "btnZZZChoosePath";
+            this.btnZZZChoosePath.Size = new System.Drawing.Size(34, 23);
+            this.btnZZZChoosePath.TabIndex = 34;
+            this.btnZZZChoosePath.Text = "...";
+            this.btnZZZChoosePath.UseVisualStyleBackColor = true;
+            // 
+            // btnZZZDelete
+            // 
+            this.btnZZZDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnZZZDelete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnZZZDelete.Location = new System.Drawing.Point(314, 281);
+            this.btnZZZDelete.Name = "btnZZZDelete";
+            this.btnZZZDelete.Size = new System.Drawing.Size(90, 24);
+            this.btnZZZDelete.TabIndex = 28;
+            this.btnZZZDelete.Text = "删除选中账号";
+            this.btnZZZDelete.UseVisualStyleBackColor = true;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label21.Location = new System.Drawing.Point(15, 121);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(89, 12);
+            this.label21.TabIndex = 27;
+            this.label21.Text = "保存账号列表：";
+            // 
+            // btnZZZSwitch
+            // 
+            this.btnZZZSwitch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnZZZSwitch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnZZZSwitch.Location = new System.Drawing.Point(315, 135);
+            this.btnZZZSwitch.Name = "btnZZZSwitch";
+            this.btnZZZSwitch.Size = new System.Drawing.Size(90, 41);
+            this.btnZZZSwitch.TabIndex = 26;
+            this.btnZZZSwitch.Text = "切换选中账号";
+            this.btnZZZSwitch.UseVisualStyleBackColor = true;
+            // 
+            // btnZZZAdd
+            // 
+            this.btnZZZAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnZZZAdd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnZZZAdd.Location = new System.Drawing.Point(314, 251);
+            this.btnZZZAdd.Name = "btnZZZAdd";
+            this.btnZZZAdd.Size = new System.Drawing.Size(90, 24);
+            this.btnZZZAdd.TabIndex = 25;
+            this.btnZZZAdd.Text = "保存当前账号";
+            this.btnZZZAdd.UseVisualStyleBackColor = true;
+            // 
+            // lvwZZZAcct
+            // 
+            this.lvwZZZAcct.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lvwZZZAcct.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader6});
+            this.lvwZZZAcct.GridLines = true;
+            this.lvwZZZAcct.HideSelection = false;
+            this.lvwZZZAcct.Location = new System.Drawing.Point(14, 135);
+            this.lvwZZZAcct.Margin = new System.Windows.Forms.Padding(2);
+            this.lvwZZZAcct.MultiSelect = false;
+            this.lvwZZZAcct.Name = "lvwZZZAcct";
+            this.lvwZZZAcct.Size = new System.Drawing.Size(295, 469);
+            this.lvwZZZAcct.TabIndex = 24;
+            this.lvwZZZAcct.UseCompatibleStateImageBehavior = false;
+            this.lvwZZZAcct.View = System.Windows.Forms.View.List;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "名称";
+            this.columnHeader6.Width = 273;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(17, 636);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(395, 12);
+            this.label22.TabIndex = 43;
+            this.label22.Text = "个人修改，有bug请反馈到 https://github.com/qsuron0/mihoyo-starter";
+            this.label22.Click += new System.EventHandler(this.label22_Click);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(17, 648);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(89, 12);
+            this.label23.TabIndex = 44;
+            this.label23.Text = "或QQ 280970160";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(411, 504);
+            this.ClientSize = new System.Drawing.Size(444, 749);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.tab1);
             this.Controls.Add(this.menuStrip1);
@@ -1583,6 +1825,11 @@
             this.contextMenuStrip1.ResumeLayout(false);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            this.tabPageZZZ.ResumeLayout(false);
+            this.tabPageZZZ.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1708,6 +1955,25 @@
         private System.Windows.Forms.Button btnStarRailOverseaFPSEdit;
         private System.Windows.Forms.NumericUpDown numericUpDownFPSOversea;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TabPage tabPageZZZ;
+        private System.Windows.Forms.ToolStripMenuItem DisplayZZZTabToolStripMenuItem;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.Button btnZZZStart;
+        private System.Windows.Forms.CheckBox chkZZZAutoStart;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox txtZZZStartParam;
+        private System.Windows.Forms.TextBox txtZZZPath;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Button btnZZZChoosePath;
+        private System.Windows.Forms.Button btnZZZDelete;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Button btnZZZSwitch;
+        private System.Windows.Forms.Button btnZZZAdd;
+        private System.Windows.Forms.ListView lvwZZZAcct;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
     }
 }
 
