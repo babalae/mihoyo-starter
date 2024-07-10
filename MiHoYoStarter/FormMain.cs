@@ -26,7 +26,7 @@ namespace MiHoYoStarter
         private GameFormControl starRailFormControl = new GameFormControl("崩坏：星穹铁道", "崩铁", "StarRail", "StarRail");
 
         private GameFormControl zzzFormControl =
-            new GameFormControl("绝区零", "绝区零", "ZZZ", "ZZZ");
+            new GameFormControl("绝区零", "绝区零", "ZZZ", "ZenlessZoneZero");
 
 
         private GameFormControl honkaiImpact3FormControl = new GameFormControl("崩坏3", "崩坏3", "HonkaiImpact3", "BH3");
@@ -87,6 +87,7 @@ namespace MiHoYoStarter
             chkHonkaiImpact3AutoStart.Checked = Properties.Settings.Default.HonkaiImpact3AutoStartEnabled;
 
             RefreshTab();
+            RefreshNotifyIconContextMenu();
         }
 
         public void RefreshNotifyIconContextMenu()
@@ -115,13 +116,11 @@ namespace MiHoYoStarter
             {
                 this.contextMenuStrip1.Items.AddRange(starRailFormControl.AcctMenuItemList.ToArray());
                 this.contextMenuStrip1.Items.Add(new ToolStripSeparator());
-                ;
             }
             if (DisplayZZZTabToolStripMenuItem.Checked && zzzFormControl.AcctMenuItemList.Count > 0)
             {
-                this.contextMenuStrip1.Items.AddRange(starRailFormControl.AcctMenuItemList.ToArray());
+                this.contextMenuStrip1.Items.AddRange(zzzFormControl.AcctMenuItemList.ToArray());
                 this.contextMenuStrip1.Items.Add(new ToolStripSeparator());
-                ;
             }
 
             if (DisplayStarRailOverseaTabToolStripMenuItem.Checked &&
@@ -129,14 +128,12 @@ namespace MiHoYoStarter
             {
                 this.contextMenuStrip1.Items.AddRange(starRailOverseaFormControl.AcctMenuItemList.ToArray());
                 this.contextMenuStrip1.Items.Add(new ToolStripSeparator());
-                ;
             }
 
             if (DisplayHonkaiImpact3TabToolStripMenuItem.Checked && honkaiImpact3FormControl.AcctMenuItemList.Count > 0)
             {
                 this.contextMenuStrip1.Items.AddRange(honkaiImpact3FormControl.AcctMenuItemList.ToArray());
                 this.contextMenuStrip1.Items.Add(new ToolStripSeparator());
-                ;
             }
 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[]
