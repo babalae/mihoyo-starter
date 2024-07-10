@@ -39,6 +39,7 @@
     * 原神(国服)：`\Genshin Impact\Genshin Impact Game\YuanShen.exe`
     * 云·原神：`\Genshin Impact Cloud Game\Genshin Impact Cloud Game.exe`
     * 崩坏：星穹铁道：`\Star Rail\Game\StarRail.exe`
+    * 绝区零：`\ZenlessZoneZero Game\ZenlessZoneZero.exe`
 
 ## 问题反馈
 
