@@ -348,7 +348,11 @@ namespace MiHoYoStarter
                 MessageBox.Show("请选择要切换的账号", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-
+            if (string.IsNullOrEmpty(txtPath.Text))
+            {
+                MessageBox.Show("请选择游戏路径", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
 
             var pros = Process.GetProcessesByName(ProcessName);
 
@@ -374,7 +378,7 @@ namespace MiHoYoStarter
                 {
                     ProcessStartInfo startInfo = new ProcessStartInfo();
                     startInfo.UseShellExecute = true;
-                    startInfo.WorkingDirectory = Environment.CurrentDirectory;
+                    startInfo.WorkingDirectory = Path.GetDirectoryName(txtPath.Text);
                     startInfo.FileName = txtPath.Text;
                     startInfo.Verb = "runas";
                     if (txtStartParam != null && !string.IsNullOrEmpty(txtStartParam.Text))
