@@ -1,20 +1,16 @@
 更多：**[🍨BetterGI · 更好的原神（自动化工具合集）](https://github.com/babalae/better-genshin-impact)** | [🎲七圣召唤自动打牌](https://github.com/babalae/genius-invokation-auto-toy) | [🐟 自动钓鱼机](https://github.com/babalae/genshin-fishing-toy) 
 
 
-# 🛠 新增支持绝区零-20240708
-
-[📥Github下载（2.2）](https://github.com/qsuron0/mihoyo-starter/releases/tag/releases)
-
 # 🛠 MHY启动器
 
 
-原神、云·原神、崩坏：星穹铁道、崩坏三 多账号快速切换工具，支持国际服。
+原神、云·原神、崩坏：星穹铁道、崩坏三、绝区零 多账号快速切换工具，支持国际服。
 
 如果你不玩其中某个游戏，可以通过“界面显示”菜单进行隐藏。
 
 [老版本](https://github.com/babalae/genshin-account)只支持原神，现在看看MHY现在游戏基本都是一样的账号信息存储方式，顺手就重写了下（复制粘贴了下）。
 
-[📥Github下载（2.1）](https://github.com/babalae/mihoyo-starter/releases/download/2.1/MiHoYoStarter_2.1.zip)
+[📥Github下载（2.3）](https://github.com/babalae/mihoyo-starter/releases/download/2.3/MiHoYoStarter_2.3.zip)
 
 ## 截图
 ![Screenshot](https://raw.githubusercontent.com/babalae/mihoyo-starter/main/Document/Screenshot.gif)
