@@ -97,6 +97,9 @@ namespace MiHoYoStarter
                         case "ZZZ":
                             path = Path.Combine(installPath, "Game", "ZenlessZoneZero.exe");
                             break;
+                        case "ZZZOversea":
+                            path = Path.Combine(installPath, "Game", "ZenlessZoneZero.exe");
+                            break;
                         case "StarRailOversea":
                             path = Path.Combine(installPath, "Game", "StarRail.exe");
                             break;
@@ -162,6 +165,9 @@ namespace MiHoYoStarter
                     break;
                 case "ZZZ":
                     dialog.Filter = "绝区零|ZenlessZoneZero.exe|可执行文件(*.exe)|*.exe";
+                    break;
+                case "ZZZOversea":
+                    dialog.Filter = "绝区零（国际服）|ZenlessZoneZero.exe|可执行文件(*.exe)|*.exe";
                     break;
                 case "StarRailOversea":
                     dialog.Filter = "崩坏：星穹铁道（国际服）|StarRail.exe|可执行文件(*.exe)|*.exe";

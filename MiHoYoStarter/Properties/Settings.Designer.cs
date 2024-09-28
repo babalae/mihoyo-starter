@@ -12,7 +12,7 @@ namespace MiHoYoStarter.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.0.1.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.6.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -344,6 +344,54 @@ namespace MiHoYoStarter.Properties {
             }
             set {
                 this["ZZZStartParam"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ZZZOverseaPath {
+            get {
+                return ((string)(this["ZZZOverseaPath"]));
+            }
+            set {
+                this["ZZZOverseaPath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool DisplayZZZOverseaEnabled {
+            get {
+                return ((bool)(this["DisplayZZZOverseaEnabled"]));
+            }
+            set {
+                this["DisplayZZZOverseaEnabled"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool ZZZOverseaAutoStartEnabled {
+            get {
+                return ((bool)(this["ZZZOverseaAutoStartEnabled"]));
+            }
+            set {
+                this["ZZZOverseaAutoStartEnabled"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ZZZOverseaStartParam {
+            get {
+                return ((string)(this["ZZZOverseaStartParam"]));
+            }
+            set {
+                this["ZZZOverseaStartParam"] = value;
             }
         }
     }

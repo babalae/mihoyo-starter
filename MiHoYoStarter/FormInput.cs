@@ -51,6 +51,10 @@ namespace MiHoYoStarter
                 {
                     acct = new ZZZAccount();
                 }
+                else if (gameNameEN == "ZZZOversea")
+                {
+                    acct = new ZZZOverseaAccount();
+                }
                 else if (gameNameEN == "StarRailOversea")
                 {
                     acct = new StarRailOverseaAccount();
